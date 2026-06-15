@@ -1,0 +1,1 @@
+# richardsamier.com
