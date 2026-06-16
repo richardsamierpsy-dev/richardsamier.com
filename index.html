@@ -15,6 +15,9 @@
   <meta property="og:url" content="https://www.richardsamier.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="fr_FR" />
+  <meta property="og:image" content="https://www.richardsamier.com/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
   <!-- Schema.org Psychologist -->
   <script type="application/ld+json">
@@ -599,7 +602,7 @@
     /* ── RESPONSIVE ── */
     @media (max-width: 640px) {
       .hero-inner { grid-template-columns: 1fr; }
-      .hero-photo-wrap { display: none; }
+      .hero-photo-wrap { display: flex; width: 120px; height: 120px; margin-bottom: 1.5rem; order: -1; }
       .approche-grid, .tarifs-grid, .modalites-grid,
       .contact-grid, .session-steps { grid-template-columns: 1fr; }
       .nav-links li:not(:last-child) { display: none; }
@@ -618,7 +621,7 @@
       <ul class="nav-links">
         <li><a href="#about">Qui suis-je</a></li>
         <li><a href="#specialites">Spécialités</a></li>
-        <li><a href="#approche">Approche</a></li>
+        <li><a href="#approche">Comment je travaille</a></li>
         <li><a href="#tarifs">Tarifs</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="https://www.doctolib.fr/psychologue/lyon/richard-samier" target="_blank" rel="noopener" class="nav-cta">Prendre RDV</a></li>
@@ -630,18 +633,17 @@
   <section id="hero">
     <div class="hero-inner">
       <div>
-        <p class="hero-eyebrow">Psychologue · Lyon 6 · Cabinet & Visio</p>
-        <h1>Retrouver ses ressources,<br>à son rythme.</h1>
+        <p class="hero-eyebrow">Psychologue à Lyon 6 · Burnout · Anxiété · Sens</p>
+        <h1>"Je vais bien, mais..."</h1>
         <p class="hero-lead">Parfois, on se réveille épuisé sans vraiment savoir pourquoi. On doute, on s'inquiète, on perd le fil. Dans un espace confidentiel et sans jugement, je vous aide à mieux comprendre ce que vous traversez et à aller mieux.</p>
         <div class="hero-badges">
           <span class="badge">Burn-out</span>
-          <span class="badge">Épuisement professionnel</span>
           <span class="badge">Bored-out</span>
           <span class="badge">Anxiété</span>
-          <span class="badge">Stress chronique</span>
+          <span class="badge">Stress</span>
+          <span class="badge">Sens au travail</span>
           <span class="badge">Thérapie Cognitivo-Comportementale (TCC)</span>
           <span class="badge">Thérapie brève</span>
-          <span class="badge">Sens au travail</span>
           <span class="badge">Équilibre pro-perso</span>
           <span class="badge">Régulation des émotions</span>
           <span class="badge">Motivation</span>
@@ -667,7 +669,7 @@
     <div class="container fade-in">
       <h2>Qui suis-je ?</h2>
       <div class="about-highlight">
-        "Cette double culture — psychologique et professionnelle — me permet de comprendre de l'intérieur les réalités du monde du travail que vivent mes patients."
+        "J'ai passé six ans dans des start-ups à observer de l'intérieur ce que le monde du travail fait aux gens. C'est en grande partie ce qui m'a amené à exercer la psychologie."
       </div>
       <p>Psychologue clinicien (RPPS n° 10109835404), diplômé de l'Université Paris 8, je suis spécialisé en Thérapies Cognitivo-Comportementales (TCC). J'exerce en cabinet à Lyon 6 et en téléconsultation.</p>
       <p>Avant de me consacrer pleinement à la pratique clinique, j'ai évolué pendant près de six ans au cœur de l'écosystème start-up français, dans des fonctions mêlant analyse, accompagnement et structuration. Ces expériences m'ont permis d'observer de près les enjeux humains liés à la performance, à la charge mentale, à la difficulté à poser des limites et à la fatigue invisible dans des environnements professionnels exigeants.</p>
@@ -690,18 +692,9 @@
   <section id="specialites">
     <div class="container fade-in">
       <h2>Ce que j'accompagne</h2>
-      <p>J'accompagne les adultes traversant des difficultés liées au travail ou à la vie personnelle, notamment :</p>
-      <div class="tags">
-        <span class="tag">Épuisement professionnel</span>
-        <span class="tag">Burn-out</span>
-        <span class="tag">Bored-out</span>
-        <span class="tag">Anxiété</span>
-        <span class="tag">Stress chronique</span>
-        <span class="tag">Motivation</span>
-        <span class="tag">Sens au travail</span>
-        <span class="tag">Équilibre pro-perso</span>
-        <span class="tag">Régulation des émotions</span>
-      </div>
+      <p>Les gens qui arrivent en première séance ont souvent du mal à mettre des mots sur ce qui ne va pas. Ils savent que quelque chose coince — dans leur travail, dans leur tête, dans leur quotidien — mais pas toujours où exactement.</p>
+      <p>C'est souvent là que ça commence : un épuisement qui s'installe, une anxiété qui tourne en boucle, un sentiment de ne plus trouver sa place, une difficulté à poser des limites. Pas forcément une crise. Juste quelque chose qui pèse.</p>
+      <p>J'accompagne principalement des adultes sur des problématiques liées au travail et à la vie personnelle — burn-out, bored-out, stress, anxiété, perte de sens, charge mentale, confiance en soi, régulation des émotions, équilibre pro-perso.</p>
     </div>
   </section>
 
@@ -710,42 +703,18 @@
   <!-- APPROCHE -->
   <section id="approche">
     <div class="container fade-in">
-      <h2>Approche thérapeutique</h2>
-      <p style="margin-bottom:1.8rem;">Les TCC sont des thérapies brèves, structurées et validées scientifiquement. Elles agissent sur les pensées, les émotions et les comportements qui entretiennent la souffrance.</p>
-      <div class="approche-grid">
-        <div class="approche-card">
-          <h3>Pensées automatiques</h3>
-          <p>Identifier et transformer les schémas de pensée négatifs qui alimentent la souffrance.</p>
-        </div>
-        <div class="approche-card">
-          <h3>Comportements d'évitement</h3>
-          <p>Réduire progressivement les stratégies d'évitement qui maintiennent l'anxiété.</p>
-        </div>
-        <div class="approche-card">
-          <h3>Régulation émotionnelle</h3>
-          <p>Développer des stratégies concrètes pour mieux comprendre et gérer ses émotions.</p>
-        </div>
-        <div class="approche-card">
-          <h3>Autonomie durable</h3>
-          <p>Retrouver un rapport à soi et au quotidien plus apaisé, dans une logique de prévention.</p>
-        </div>
-      </div>
-      <div class="outils">
-        <h3>Outils utilisés en séance</h3>
-        <ul>
-          <li>Recadrage cognitif — transformer la perception des situations</li>
-          <li>Analyse des émotions — comprendre leur origine et leur rôle</li>
-          <li>Feedback miroir — clarifier ce que vous exprimez et ressentez</li>
-        </ul>
-      </div>
-      <p>Ma posture est basée sur l'écoute active, la présence attentive et l'absence de jugement — douce et ferme à la fois — pour vous accompagner dans la découverte de vos propres solutions.</p>
+      <h2>Comment je travaille</h2>
+      <p>La première séance, je pose beaucoup de questions. Mon objectif : comprendre où ça bloque vraiment, où est la souffrance. Pas pour coller une étiquette, mais pour qu'on puisse définir ensemble un objectif concret — et surtout vérifier qu'on peut travailler ensemble. Parce que la relation compte autant que la méthode.</p>
+      <p>Je travaille avec mon franc-parler, parfois de l'humour, et surtout un vrai échange — pas un monologue de psy derrière son bureau. Les séances s'articulent autour de ce que vous vivez concrètement, pas de théories abstraites.</p>
+      <p>Mon cadre de référence, ce sont les Thérapies Cognitivo-Comportementales (TCC) — des thérapies brèves, validées scientifiquement, qui travaillent sur le lien entre ce qu'on pense, ce qu'on ressent et ce qu'on fait. Pas pour "positiver" ou effacer ce qui est difficile, mais pour comprendre ce qui se joue et trouver des leviers concrets pour aller mieux.</p>
+      <p>Ce qui m'intéresse, c'est de vous aider à développer vos propres clés de lecture — pour que vous n'ayez plus besoin de moi.</p>
     </div>
   </section>
 
   <!-- CTA MILIEU -->
   <div class="cta-mid fade-in">
-    <h2>Prêt à faire le premier pas ?</h2>
-    <p>La première consultation dure 45 minutes et coûte 40€. Vous restez libre à chaque étape.</p>
+    <h2>Vous voulez en savoir plus avant de vous lancer ?</h2>
+    <p>N'hésitez pas à m'envoyer un message — ou à réserver directement une première séance, sans engagement.</p>
     <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
       <a href="https://www.doctolib.fr/psychologue/lyon/richard-samier" class="btn-white" target="_blank" rel="noopener">🏢 Cabinet sur Doctolib →</a>
       <a href="https://calendly.com/richardsamier-psy/1to1" class="btn-white-ghost" target="_blank" rel="noopener">💻 Visio →</a>
@@ -779,25 +748,10 @@
   <!-- PREMIERE SESSION -->
   <section id="premiere">
     <div class="container fade-in">
-      <h2>La première session</h2>
-      <p>Prendre rendez-vous avec un psychologue est déjà un acte fort. Voici comment se déroule votre démarche :</p>
-      <div class="session-steps">
-        <div class="session-step">
-          <p class="step-num">01</p>
-          <h3>Se rencontrer</h3>
-          <p>Un espace d'écoute sans jugement pour poser votre situation et vos questions.</p>
-        </div>
-        <div class="session-step">
-          <p class="step-num">02</p>
-          <h3>Clarifier la demande</h3>
-          <p>Comprendre ensemble vos enjeux, vos ressources et vos objectifs.</p>
-        </div>
-        <div class="session-step">
-          <p class="step-num">03</p>
-          <h3>Construire le suivi</h3>
-          <p>Définir l'accompagnement adapté à votre rythme et à votre situation.</p>
-        </div>
-      </div>
+      <h2>La première séance</h2>
+      <p>Prendre rendez-vous avec un psy, c'est déjà un acte. Ça peut faire peur, ou simplement demander du courage. C'est normal.</p>
+      <p>La première séance dure 45 minutes. On se rencontre, je pose des questions, j'essaie de comprendre votre situation, ce qui coince, où est la souffrance. À la fin, on définit ensemble un objectif — et on voit si on peut travailler ensemble. Il n'y a aucun engagement au-delà de ce premier rendez-vous.</p>
+      <p style="color: var(--text-light); font-size: 0.9rem;">Première séance : 40 € · Séances de suivi : 70 € · Règlement par chèque, virement ou espèces · Annulation gratuite jusqu'à 48h avant</p>
     </div>
   </section>
 
