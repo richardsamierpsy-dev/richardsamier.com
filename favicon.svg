@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Fond sombre -->
+  <rect width="64" height="64" fill="#111111" rx="10"/>
+  
+  <!-- Lumière derrière la porte -->
+  <polygon points="18,10 46,10 46,56 18,56" fill="#fff8e7"/>
+  <ellipse cx="32" cy="33" rx="10" ry="16" fill="#ffffff" opacity="0.6"/>
+
+  <!-- Halo au sol -->
+  <ellipse cx="32" cy="56" rx="14" ry="4" fill="#fff5d6" opacity="0.5"/>
+
+  <!-- Mur gauche -->
+  <rect x="0" y="0" width="18" height="64" fill="#1c1c1c"/>
+  <!-- Mur droit -->
+  <rect x="46" y="0" width="18" height="64" fill="#1c1c1c"/>
+  <!-- Plafond -->
+  <rect x="0" y="0" width="64" height="10" fill="#1c1c1c"/>
+  <!-- Sol -->
+  <rect x="0" y="56" width="64" height="8" fill="#1c1c1c"/>
+
+  <!-- Cadre de porte -->
+  <rect x="16" y="8" width="32" height="50" fill="none" stroke="#444" stroke-width="2"/>
+
+  <!-- Panneau de porte en perspective — charnière à gauche -->
+  <polygon points="18,10 18,56 34,54 34,12" fill="#2a2a2a"/>
+  
+  <!-- Épaisseur de la porte -->
+  <polygon points="18,10 20,10 20,56 18,56" fill="#3a3a3a"/>
+
+  <!-- Poignée -->
+  <circle cx="32" cy="33" r="1.5" fill="#666"/>
+
+</svg>
