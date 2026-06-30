@@ -1,863 +1,178 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Richard Samier — Psychologue à Lyon 6</title>
-  <meta name="description" content="Psychologue à Lyon 6, spécialisé en thérapie cognitive et comportementale (TCC). Accompagnement des adultes : burnout, anxiété, épuisement professionnel. Cabinet Lyon 6 & téléconsultation." />
-  <meta name="keywords" content="psychologue Lyon, psychologue Lyon 6, TCC Lyon, thérapie cognitive comportementale Lyon, burnout Lyon, anxiété Lyon, épuisement professionnel Lyon, téléconsultation psychologue Lyon" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.richardsamier.com/" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="shortcut icon" href="favicon.svg" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Richard Samier — Psychologue TCC à Lyon 6" />
-  <meta property="og:description" content="Accompagnement psychologique des adultes — burnout, anxiété, épuisement professionnel. Cabinet Lyon 6 & téléconsultation." />
-  <meta property="og:url" content="https://www.richardsamier.com/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="fr_FR" />
-  <meta property="og:image" content="https://www.richardsamier.com/og-image.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-
-  <!-- Schema.org Psychologist -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Psychologist",
-    "name": "Richard Samier",
-    "description": "Psychologue TCC à Lyon 6, spécialisé dans l'accompagnement des adultes en situation de burnout, anxiété et épuisement professionnel.",
-    "url": "https://www.richardsamier.com",
-    "telephone": "+33609520666",
-    "email": "richardsamier.psy@gmail.com",
-    "identifier": "RPPS 10109835404",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "116 rue Vauban",
-      "addressLocality": "Lyon",
-      "postalCode": "69006",
-      "addressCountry": "FR"
-    },
-    "areaServed": ["Lyon", "Lyon 6", "Rhône-Alpes", "France"],
-    "availableLanguage": "French",
-    "priceRange": "50€–70€",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Consultations psychologiques",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "name": "Première consultation",
-          "price": "50",
-          "priceCurrency": "EUR",
-          "description": "45 minutes — évaluation et clarification de la demande"
-        },
-        {
-          "@type": "Offer",
-          "name": "Séance de suivi",
-          "price": "70",
-          "priceCurrency": "EUR",
-          "description": "45 minutes — séance individuelle régulière"
-        }
-      ]
-    }
-  }
-  </script>
-
-  <!-- Schema.org FAQ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Qu'est-ce que la thérapie cognitive et comportementale (TCC) ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Les TCC sont des thérapies brèves, structurées et validées scientifiquement. Elles agissent sur les pensées automatiques négatives, les émotions et les comportements qui entretiennent la souffrance. L'objectif est de développer des stratégies concrètes pour aller mieux durablement."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Comment se déroule la première consultation ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "La première consultation dure 45 minutes. Elle permet de se rencontrer, de comprendre votre situation, vos enjeux et vos ressources, dans un cadre d'écoute et de non-jugement. Vous restez libre à chaque étape. Le tarif est de 50€."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Les consultations sont-elles remboursées ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Les consultations ne sont pas remboursées par l'Assurance Maladie. Cependant, certaines mutuelles proposent une prise en charge partielle. Renseignez-vous auprès de votre complémentaire santé."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Proposez-vous des consultations en ligne ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Oui, je propose des séances en téléconsultation via Google Meet, tous les jours de la semaine. Ces séances sont accessibles depuis toute la France."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Où se situe le cabinet à Lyon ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Le cabinet est situé au 116 rue Vauban, 69006 Lyon (Lyon 6e arrondissement). Les consultations en cabinet ont lieu le mercredi."
-        }
-      }
-    ]
-  }
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
-
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --green: #0F7B6C;
-      --green-dark: #0a6358;
-      --green-light: #e8f5f3;
-      --green-mid: #c2e4df;
-      --text: #1a1a1a;
-      --text-mid: #4a4a4a;
-      --text-light: #767676;
-      --bg: #fafaf8;
-      --white: #ffffff;
-      --border: #e5e5e0;
-      --radius: 12px;
-      --shadow: 0 2px 12px rgba(0,0,0,0.06);
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      font-weight: 300;
-      font-size: 17px;
-      line-height: 1.7;
-      color: var(--text);
-      background: var(--bg);
-    }
-
-    /* ── NAV ── */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(250,250,248,0.94);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-      padding: 0 2rem;
-    }
-    .nav-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 62px;
-    }
-    .nav-name {
-      font-family: 'Lora', serif;
-      font-weight: 600;
-      font-size: 1rem;
-      color: var(--green);
-      text-decoration: none;
-    }
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-      align-items: center;
-    }
-    .nav-links a {
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 400;
-      color: var(--text-mid);
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--green); }
-    .nav-cta {
-      background: var(--green);
-      color: var(--white) !important;
-      padding: 0.45rem 1rem;
-      border-radius: 6px;
-      font-weight: 500 !important;
-      transition: background 0.2s !important;
-    }
-    .nav-cta:hover { background: var(--green-dark) !important; color: var(--white) !important; }
-
-    /* ── LAYOUT ── */
-    section { padding: 5rem 2rem; }
-    .container { max-width: 900px; margin: 0 auto; }
-
-    /* ── HERO ── */
-    #hero {
-      padding: 6rem 2rem 5rem;
-      background: var(--white);
-    }
-    .hero-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 180px;
-      gap: 3rem;
-      align-items: center;
-    }
-    .hero-eyebrow {
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
-      color: var(--green);
-      margin-bottom: 1.2rem;
-    }
-    h1 {
-      font-family: 'Lora', serif;
-      font-size: clamp(2rem, 4vw, 2.9rem);
-      font-weight: 600;
-      line-height: 1.22;
-      color: var(--text);
-      margin-bottom: 1.4rem;
-    }
-    .hero-lead {
-      font-size: 1.05rem;
-      color: var(--text-mid);
-      max-width: 560px;
-      margin-bottom: 2rem;
-    }
-    .hero-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 2.5rem;
-    }
-    .badge {
-      font-size: 0.78rem;
-      font-weight: 400;
-      padding: 0.28rem 0.7rem;
-      border-radius: 100px;
-      background: var(--green-light);
-      color: var(--green);
-      border: 1px solid var(--green-mid);
-    }
-    .hero-actions { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
-    .btn-primary {
-      display: inline-block;
-      background: var(--green);
-      color: var(--white);
-      text-decoration: none;
-      padding: 0.85rem 1.8rem;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      font-weight: 500;
-      transition: background 0.2s, transform 0.15s;
-      box-shadow: 0 2px 8px rgba(15,123,108,0.25);
-    }
-    .btn-primary:hover { background: var(--green-dark); transform: translateY(-1px); }
-    .btn-primary-outline {
-      background: transparent;
-      border: 2px solid var(--green);
-      color: var(--green) !important;
-      box-shadow: none;
-    }
-    .btn-primary-outline:hover { background: var(--green-light); }
-    .btn-ghost {
-      color: var(--green);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 400;
-      border-bottom: 1px solid var(--green-mid);
-      transition: border-color 0.2s;
-      padding-bottom: 1px;
-    }
-    .btn-ghost:hover { border-color: var(--green); }
-
-    .hero-photo-wrap {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      background: var(--green-light);
-      border: 4px solid var(--green-mid);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3.5rem;
-      flex-shrink: 0;
-      overflow: hidden;
-    }
-    .hero-photo-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* ── DIVIDER ── */
-    .divider { border: none; border-top: 1px solid var(--border); margin: 0; }
-
-    /* ── HEADINGS ── */
-    h2 {
-      font-family: 'Lora', serif;
-      font-size: clamp(1.4rem, 3vw, 1.95rem);
-      font-weight: 600;
-      color: var(--green);
-      margin-bottom: 1.4rem;
-    }
-    h3 {
-      font-family: 'Lora', serif;
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 0.4rem;
-    }
-    p { margin-bottom: 1rem; color: var(--text-mid); }
-    p:last-child { margin-bottom: 0; }
-
-    /* ── QUI SUIS-JE ── */
-    #about { background: var(--bg); }
-    .about-highlight {
-      display: inline-block;
-      background: var(--green-light);
-      border-left: 3px solid var(--green);
-      border-radius: 0 8px 8px 0;
-      padding: 1rem 1.4rem;
-      font-size: 0.95rem;
-      color: var(--text-mid);
-      margin-bottom: 1.5rem;
-      font-style: italic;
-    }
-
-    /* ── SPECIALITES ── */
-    #specialites { background: var(--white); }
-    .tags { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 1.4rem; }
-    .tag {
-      font-size: 0.9rem;
-      padding: 0.42rem 1rem;
-      border-radius: 100px;
-      background: var(--green-light);
-      color: var(--green);
-      border: 1px solid var(--green-mid);
-    }
-
-    /* ── APPROCHE ── */
-    #approche { background: var(--bg); }
-    .approche-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-    .approche-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.4rem 1.6rem;
-      box-shadow: var(--shadow);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .approche-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.09); }
-    .approche-card h3 { color: var(--green); font-size: 0.95rem; margin-bottom: 0.35rem; }
-    .approche-card p { font-size: 0.88rem; margin: 0; }
-    .outils {
-      background: var(--green-light);
-      border-left: 3px solid var(--green);
-      border-radius: 0 var(--radius) var(--radius) 0;
-      padding: 1.4rem 1.6rem;
-      margin-bottom: 1.5rem;
-    }
-    .outils h3 { color: var(--green); margin-bottom: 0.8rem; font-size: 1rem; }
-    .outils ul { list-style: none; padding: 0; }
-    .outils ul li { padding: 0.28rem 0; font-size: 0.93rem; color: var(--text-mid); }
-    .outils ul li::before { content: "→ "; color: var(--green); font-weight: 500; }
-
-    /* ── CTA MILIEU ── */
-    .cta-mid {
-      background: var(--green);
-      border-radius: var(--radius);
-      padding: 2.5rem 2rem;
-      text-align: center;
-      margin: 0 2rem;
-    }
-    .cta-mid h2 { color: var(--white); margin-bottom: 0.6rem; }
-    .cta-mid p { color: rgba(255,255,255,0.8); margin-bottom: 1.6rem; font-size: 0.95rem; }
-    .btn-white {
-      display: inline-block;
-      background: var(--white);
-      color: var(--green);
-      text-decoration: none;
-      padding: 0.8rem 1.8rem;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      font-weight: 500;
-      transition: opacity 0.2s, transform 0.15s;
-    }
-    .btn-white:hover { opacity: 0.93; transform: translateY(-1px); }
-    .btn-white-ghost {
-      display: inline-block;
-      background: transparent;
-      color: var(--white);
-      text-decoration: none;
-      padding: 0.8rem 1.8rem;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      font-weight: 500;
-      border: 2px solid rgba(255,255,255,0.6);
-      transition: border-color 0.2s, transform 0.15s;
-    }
-    .btn-white-ghost:hover { border-color: var(--white); transform: translateY(-1px); }
-
-    /* ── TARIFS ── */
-    #tarifs { background: var(--white); }
-    .tarifs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 1.4rem; }
-    .tarif-card {
-      border: 1.5px solid var(--border);
-      border-radius: var(--radius);
-      padding: 2rem;
-      text-align: center;
-      background: var(--bg);
-    }
-    .tarif-card.featured { border-color: var(--green); background: var(--white); box-shadow: var(--shadow); }
-    .tarif-label { font-size: 0.78rem; font-weight: 500; color: var(--green); text-transform: uppercase; letter-spacing: 0.09em; margin-bottom: 0.8rem; }
-    .tarif-price { font-family: 'Lora', serif; font-size: 2.6rem; font-weight: 600; color: var(--text); line-height: 1; margin-bottom: 0.5rem; }
-    .tarif-detail { font-size: 0.83rem; color: var(--text-light); }
-    .tarif-note {
-      background: var(--green-light);
-      border-radius: var(--radius);
-      padding: 1rem 1.3rem;
-      font-size: 0.87rem;
-      color: var(--text-mid);
-      margin-bottom: 1rem;
-    }
-
-    /* ── PREMIERE SESSION ── */
-    #premiere { background: var(--bg); }
-    .session-steps {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-    .session-step {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.4rem;
-      text-align: center;
-      box-shadow: var(--shadow);
-    }
-    .step-num {
-      font-family: 'Lora', serif;
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: var(--green-mid);
-      line-height: 1;
-      margin-bottom: 0.6rem;
-    }
-    .session-step h3 { font-size: 0.95rem; color: var(--green); margin-bottom: 0.4rem; }
-    .session-step p { font-size: 0.85rem; margin: 0; }
-
-    /* ── MODALITES ── */
-    #modalites { background: var(--white); }
-    .modalites-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
-    .modalite-card {
-      background: var(--white);
-      border: 1.5px solid var(--border);
-      border-radius: var(--radius);
-      padding: 2rem;
-      box-shadow: var(--shadow);
-    }
-    .modalite-card h3 { color: var(--text); font-size: 1.05rem; margin-bottom: 0.25rem; }
-    .modalite-sub { font-size: 0.83rem; color: var(--text-mid); margin-bottom: 0.3rem; }
-    .modalite-adresse { font-size: 0.83rem; color: var(--text-light); margin-bottom: 1.4rem; }
-    .btn-white-outline {
-      display: inline-block;
-      background: var(--green);
-      color: var(--white);
-      text-decoration: none;
-      padding: 0.6rem 1.2rem;
-      border-radius: 6px;
-      font-size: 0.88rem;
-      font-weight: 500;
-      transition: background 0.2s, transform 0.15s;
-    }
-    .btn-white-outline:hover { background: var(--green-dark); transform: translateY(-1px); }
-
-    /* ── FAQ ── */
-    #faq { background: var(--bg); }
-    .faq-list { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem; }
-    details {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-    }
-    details[open] { border-color: var(--green-mid); }
-    summary {
-      padding: 1.2rem 1.5rem;
-      font-weight: 500;
-      font-size: 0.97rem;
-      color: var(--text);
-      cursor: pointer;
-      list-style: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-    }
-    summary::-webkit-details-marker { display: none; }
-    summary::after {
-      content: "+";
-      font-size: 1.3rem;
-      color: var(--green);
-      flex-shrink: 0;
-      transition: transform 0.2s;
-    }
-    details[open] summary::after { transform: rotate(45deg); }
-    .faq-answer {
-      padding: 0 1.5rem 1.2rem;
-      font-size: 0.93rem;
-      color: var(--text-mid);
-      line-height: 1.7;
-    }
-
-    /* ── CONTACT ── */
-    #contact { background: var(--white); }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-    .contact-item { display: flex; flex-direction: column; gap: 0.3rem; }
-    .contact-label {
-      font-size: 0.73rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-light);
-    }
-    .contact-value { font-size: 0.93rem; color: var(--text); text-decoration: none; }
-    .contact-value:hover { color: var(--green); }
-    .rpps-note {
-      margin-top: 2rem;
-      font-size: 0.8rem;
-      color: var(--text-light);
-      border-top: 1px solid var(--border);
-      padding-top: 1.2rem;
-    }
-
-    /* ── STICKY MOBILE CTA ── */
-    .sticky-cta {
-      display: none;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 200;
-      background: var(--white);
-      border-top: 1px solid var(--border);
-      padding: 0.9rem 1.5rem;
-      box-shadow: 0 -4px 16px rgba(0,0,0,0.08);
-    }
-    .sticky-cta a {
-      display: block;
-      text-align: center;
-      background: var(--green);
-      color: var(--white);
-      text-decoration: none;
-      padding: 0.85rem;
-      border-radius: 8px;
-      font-weight: 500;
-      font-size: 0.95rem;
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      background: var(--text);
-      color: rgba(255,255,255,0.45);
-      text-align: center;
-      padding: 1.6rem 2rem;
-      font-size: 0.78rem;
-    }
-    footer a { color: rgba(255,255,255,0.65); text-decoration: none; }
-
-    /* ── ANIMATIONS ── */
-    @media (prefers-reduced-motion: no-preference) {
-      .fade-in {
-        opacity: 0;
-        transform: translateY(16px);
-        transition: opacity 0.5s ease, transform 0.5s ease;
-      }
-      .fade-in.visible { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 640px) {
-      .hero-inner { grid-template-columns: 1fr; }
-      .hero-photo-wrap { display: flex; width: 120px; height: 120px; margin-bottom: 1.5rem; order: -1; }
-      .approche-grid, .tarifs-grid, .modalites-grid,
-      .contact-grid, .session-steps { grid-template-columns: 1fr; }
-      .nav-links li:not(:last-child) { display: none; }
-      .sticky-cta { display: block; }
-      body { padding-bottom: 80px; }
-      .cta-mid { margin: 0; border-radius: 0; }
-    }
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.6">
+  <style type="text/css">
+    body {background-color: #f9f9f6}
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #136959; -webkit-text-stroke: #136959}
+    p.p6 {margin: 0.0px 0.0px 14.4px 0.0px; font: 9.4px 'Helvetica Neue'; color: #136959; -webkit-text-stroke: #136959}
+    p.p8 {margin: 0.0px 0.0px 24.0px 0.0px; font: 12.6px 'Helvetica Neue'; color: #393939; -webkit-text-stroke: #393939}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.4px 'Helvetica Neue'; color: #136959; -webkit-text-stroke: #136959; background-color: #e3f3f0}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.4px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff; background-color: #136959}
+    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.4px 'Helvetica Neue'; color: #136959; -webkit-text-stroke: #136959}
+    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.8px 'Helvetica Neue'; color: #136959; -webkit-text-stroke: #136959}
+    p.p13 {margin: 0.0px 0.0px 0.0px 0.0px; font: 42.0px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414}
+    p.p14 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px 'Helvetica Neue'; color: #6d6d6d; -webkit-text-stroke: #6d6d6d; min-height: 20.0px}
+    p.p16 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.4px 'Helvetica Neue'; color: #393939; -webkit-text-stroke: #393939}
+    p.p17 {margin: 0.0px 0.0px 12.0px 0.0px; font: 17.0px 'Helvetica Neue'; color: #393939; -webkit-text-stroke: #393939}
+    p.p18 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px 'Helvetica Neue'; color: #393939; -webkit-text-stroke: #393939}
+    p.p19 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414}
+    p.p21 {margin: 0.0px 0.0px 19.2px 0.0px; text-align: center; font: 11.4px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.8); -webkit-text-stroke: rgba(255, 255, 255, 0.8)}
+    p.p22 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 11.4px 'Helvetica Neue'; color: #136959; -webkit-text-stroke: #136959; background-color: #ffffff}
+    p.p23 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 11.4px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff}
+    p.p24 {margin: 0.0px 0.0px 9.6px 0.0px; text-align: center; font: 9.4px 'Helvetica Neue'; color: #136959; -webkit-text-stroke: #136959}
+    p.p25 {margin: 0.0px 0.0px 6.0px 0.0px; text-align: center; font: 31.2px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414}
+    p.p26 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 10.0px 'Helvetica Neue'; color: #636363; -webkit-text-stroke: #636363}
+    p.p27 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.4px 'Helvetica Neue'; color: #393939; -webkit-text-stroke: #393939; background-color: #e3f3f0}
+    p.p28 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.8px 'Helvetica Neue'; color: #636363; -webkit-text-stroke: #636363}
+    p.p29 {margin: 0.0px 0.0px 7.2px 0.0px; font: 24.0px '.Apple Color Emoji UI'; color: #393939; -webkit-text-stroke: #393939}
+    p.p31 {margin: 0.0px 0.0px 3.6px 0.0px; font: 10.0px 'Helvetica Neue'; color: #393939; -webkit-text-stroke: #393939}
+    p.p32 {margin: 0.0px 0.0px 16.8px 0.0px; font: 10.0px 'Helvetica Neue'; color: #636363; -webkit-text-stroke: #636363}
+    p.p33 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.6px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff; background-color: #136959}
+    p.p34 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.6px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414}
+    p.p35 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.2px 'Helvetica Neue'; color: #393939; -webkit-text-stroke: #393939}
+    p.p36 {margin: 0.0px 0.0px 0.0px 0.0px; font: 8.8px 'Helvetica Neue'; color: #636363; -webkit-text-stroke: #636363}
+    p.p37 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.2px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414}
+    p.p38 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.6px 'Helvetica Neue'; color: #636363; -webkit-text-stroke: #636363}
+    p.p39 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 9.4px 'Helvetica Neue'; color: #393939; -webkit-text-stroke: #393939}
+    li.li2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.2px 'Helvetica Neue'; color: #393939; -webkit-text-stroke: #393939}
+    li.li3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.2px 'Helvetica Neue'; color: #393939}
+    li.li4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.2px 'Helvetica Neue'; color: #136959; -webkit-text-stroke: #636363}
+    li.li5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.2px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff}
+    span.s1 {font-kerning: none; background-color: rgba(249, 249, 246, 0.94)}
+    span.s2 {background-color: rgba(249, 249, 246, 0.94); -webkit-text-stroke: 0px #000000}
+    span.s3 {background-color: rgba(249, 249, 246, 0.94)}
+    span.s4 {font-kerning: none; background-color: rgba(249, 249, 246, 0.94); -webkit-text-stroke: 0px #393939}
+    span.s5 {font-kerning: none; color: #136959; -webkit-text-stroke: 0px #136959}
+    span.s6 {font-kerning: none; -webkit-text-stroke: 0px #136959}
+    span.s7 {font-kerning: none; color: #636363; background-color: rgba(249, 249, 246, 0.94)}
+    span.s8 {font-kerning: none}
+    span.s9 {background-color: #136959; -webkit-text-stroke: 0px #000000}
+    span.s10 {font-kerning: none; background-color: #ffffff}
+    span.s11 {font: 11.4px '.Apple Color Emoji UI'; font-kerning: none}
+    span.s12 {font: 11.4px 'Helvetica Neue'; font-kerning: none}
+    span.s13 {font: 11.4px '.Apple Color Emoji UI'; font-kerning: none; background-color: #ffffff}
+    span.s14 {font-kerning: none; background-color: #f9f9f6}
+    span.s15 {font-kerning: none; background-color: #e3f3f0}
+    span.s16 {font-kerning: none; background-color: #136959}
+    span.s17 {font: 11.4px 'Helvetica Neue'; font-kerning: none; color: #136959; background-color: #ffffff; -webkit-text-stroke: 0px #136959}
+    span.s18 {font: 11.4px '.Apple Color Emoji UI'; font-kerning: none; background-color: #136959}
+    span.s19 {font: 10.4px '.Apple Color Emoji UI'; font-kerning: none}
+    span.s20 {font: 10.6px 'Helvetica Neue'; font-kerning: none; color: #ffffff; background-color: #136959; -webkit-text-stroke: 0px #ffffff}
+    span.s21 {font: 11.2px 'Helvetica Neue'; font-kerning: none; color: #141414; -webkit-text-stroke: 0px #141414}
+    span.s22 {font-kerning: none; background-color: #141414}
+    span.s23 {font-kerning: none; color: rgba(255, 255, 255, 0.65); -webkit-text-stroke: 0px rgba(255, 255, 255, 0.65)}
+    ul.ul1 {list-style-type: disc}
   </style>
 </head>
 <body>
-
-  <!-- NAV -->
-  <nav>
-    <div class="nav-inner">
-      <a class="nav-name" href="#">Richard Samier</a>
-      <ul class="nav-links">
-        <li><a href="#about">Qui suis-je</a></li>
-        <li><a href="#specialites">Spécialités</a></li>
-        <li><a href="#approche">Comment je travaille</a></li>
-        <li><a href="#tarifs">Tarifs</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="https://www.doctolib.fr/psychologue/lyon/richard-samier" target="_blank" rel="noopener" class="nav-cta">Prendre RDV</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-inner">
-      <div>
-        <p class="hero-eyebrow">Psychologue à Lyon 6 · Burnout · Anxiété · Sens</p>
-        <h1>"Je vais bien, mais..."</h1>
-        <p class="hero-lead">Parfois, on se réveille épuisé sans vraiment savoir pourquoi. On doute, on s'inquiète, on perd le fil. Dans un espace confidentiel et sans jugement, je vous aide à mieux comprendre ce que vous traversez et à aller mieux.</p>
-        <div class="hero-badges">
-          <span class="badge">Burn-out</span>
-          <span class="badge">Bored-out</span>
-          <span class="badge">Anxiété</span>
-          <span class="badge">Stress</span>
-          <span class="badge">Sens au travail</span>
-          <span class="badge">Thérapie Cognitivo-Comportementale (TCC)</span>
-          <span class="badge">Thérapie brève</span>
-          <span class="badge">Équilibre pro-perso</span>
-          <span class="badge">Régulation des émotions</span>
-          <span class="badge">Motivation</span>
-          <span class="badge">Charge mentale</span>
-          <span class="badge">Confiance en soi</span>
-        </div>
-        <div class="hero-actions">
-          <a href="https://www.doctolib.fr/psychologue/lyon/richard-samier" class="btn-primary" target="_blank" rel="noopener">🏢 Cabinet (mercredi)</a>
-          <a href="https://calendly.com/richardsamier-psy/1to1" class="btn-primary btn-primary-outline" target="_blank" rel="noopener">💻 Visio (tous les jours)</a>
-          <a href="#about" class="btn-ghost">En savoir plus ↓</a>
-        </div>
-      </div>
-      <div class="hero-photo-wrap">
-        <img src="photo-profil.png" alt="Richard Samier, psychologue à Lyon 6" />
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- QUI SUIS-JE -->
-  <section id="about">
-    <div class="container fade-in">
-      <h2>Qui suis-je ?</h2>
-      <div class="about-highlight">
-        "J'ai passé six ans dans des start-ups à observer de l'intérieur ce que le monde du travail fait aux gens. C'est en grande partie ce qui m'a amené à exercer la psychologie."
-      </div>
-      <p>Psychologue clinicien (RPPS n° 10109835404), diplômé de l'Université Paris 8, je suis spécialisé en Thérapies Cognitivo-Comportementales (TCC). J'exerce en cabinet à Lyon 6 et en téléconsultation.</p>
-      <p>Avant de me consacrer pleinement à la pratique clinique, j'ai évolué pendant près de six ans au cœur de l'écosystème start-up français, dans des fonctions mêlant analyse, accompagnement et structuration. Ces expériences m'ont permis d'observer de près les enjeux humains liés à la performance, à la charge mentale, à la difficulté à poser des limites et à la fatigue invisible dans des environnements professionnels exigeants.</p>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- GALERIE CABINET -->
-  <section id="cabinet" style="padding: 3.5rem 2rem; background: var(--bg);">
-    <div class="container fade-in">
-      <h2>Le cabinet</h2>
-      <p>Un espace calme et confidentiel au 116 rue Vauban, Lyon 6e — conçu pour que vous puissiez vous poser et parler librement.</p>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:1.5rem;">
-        <img src="cabinet-salle-attente.jpg" alt="Salle d'attente du cabinet de psychologie à Lyon 6" style="width:100%; height:260px; object-fit:cover; border-radius:var(--radius); box-shadow:var(--shadow);" />
-        <img src="cabinet-bureau.jpg" alt="Bureau de consultation du cabinet de psychologie à Lyon 6" style="width:100%; height:260px; object-fit:cover; border-radius:var(--radius); box-shadow:var(--shadow);" />
-      </div>
-    </div>
-  </section>
-  <section id="specialites">
-    <div class="container fade-in">
-      <h2>Ce que j'accompagne</h2>
-      <p>Les gens qui arrivent en première séance ont souvent du mal à mettre des mots sur ce qui ne va pas. Ils savent que quelque chose coince — dans leur travail, dans leur tête, dans leur quotidien — mais pas toujours où exactement.</p>
-      <p>C'est souvent là que ça commence : un épuisement qui s'installe, une anxiété qui tourne en boucle, un sentiment de ne plus trouver sa place, une difficulté à poser des limites. Pas forcément une crise. Juste quelque chose qui pèse.</p>
-      <p>J'accompagne principalement des adultes sur des problématiques liées au travail et à la vie personnelle — burn-out, bored-out, stress, anxiété, perte de sens, charge mentale, confiance en soi, régulation des émotions, équilibre pro-perso.</p>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- APPROCHE -->
-  <section id="approche">
-    <div class="container fade-in">
-      <h2>Comment je travaille</h2>
-      <p>La première séance, je pose beaucoup de questions. Mon objectif : comprendre où ça bloque vraiment, où est la souffrance. Pas pour coller une étiquette, mais pour qu'on puisse définir ensemble un objectif concret — et surtout vérifier qu'on peut travailler ensemble. Parce que la relation compte autant que la méthode.</p>
-      <p>Je travaille avec mon franc-parler, parfois de l'humour, et surtout un vrai échange — pas un monologue de psy derrière son bureau. Les séances s'articulent autour de ce que vous vivez concrètement, pas de théories abstraites.</p>
-      <p>Mon cadre de référence, ce sont les Thérapies Cognitivo-Comportementales (TCC) — des thérapies brèves, validées scientifiquement, qui travaillent sur le lien entre ce qu'on pense, ce qu'on ressent et ce qu'on fait. Pas pour "positiver" ou effacer ce qui est difficile, mais pour comprendre ce qui se joue et trouver des leviers concrets pour aller mieux.</p>
-      <p>Ce qui m'intéresse, c'est de vous aider à développer vos propres clés de lecture — pour que vous n'ayez plus besoin de moi.</p>
-    </div>
-  </section>
-
-  <!-- CTA MILIEU -->
-  <div class="cta-mid fade-in">
-    <h2>Vous voulez en savoir plus avant de vous lancer ?</h2>
-    <p>N'hésitez pas à m'envoyer un message — ou à réserver directement une première séance, sans engagement.</p>
-    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-      <a href="https://www.doctolib.fr/psychologue/lyon/richard-samier" class="btn-white" target="_blank" rel="noopener">🏢 Cabinet sur Doctolib →</a>
-      <a href="https://calendly.com/richardsamier-psy/1to1" class="btn-white-ghost" target="_blank" rel="noopener">💻 Visio →</a>
-    </div>
-  </div>
-
-  <hr class="divider" />
-
-  <!-- TARIFS -->
-  <section id="tarifs">
-    <div class="container fade-in">
-      <h2>Tarifs</h2>
-      <div class="tarifs-grid">
-        <div class="tarif-card featured">
-          <p class="tarif-label">1ère consultation</p>
-          <p class="tarif-price">50 €</p>
-          <p class="tarif-detail">45 min · Évaluation et clarification de la demande</p>
-        </div>
-        <div class="tarif-card">
-          <p class="tarif-label">Séance de suivi</p>
-          <p class="tarif-price">70 €</p>
-          <p class="tarif-detail">45 min · Séances individuelles régulières</p>
-        </div>
-      </div>
-      <div class="tarif-note">ℹ️ Non remboursé par l'Assurance Maladie. Certaines mutuelles proposent une prise en charge partielle — renseignez-vous auprès de votre mutuelle.</div>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- PREMIERE SESSION -->
-  <section id="premiere">
-    <div class="container fade-in">
-      <h2>La première séance</h2>
-      <p>Prendre rendez-vous avec un psy, c'est déjà un acte. Ça peut faire peur, ou simplement demander du courage. C'est normal.</p>
-      <p>La première séance dure 45 minutes. On se rencontre, je pose des questions, j'essaie de comprendre votre situation, ce qui coince, où est la souffrance. À la fin, on définit ensemble un objectif — et on voit si on peut travailler ensemble. Il n'y a aucun engagement au-delà de ce premier rendez-vous.</p>
-      <p style="color: var(--text-light); font-size: 0.9rem;">Première séance : 50 € · Séances de suivi : 70 € · Règlement par chèque, virement ou espèces · Annulation gratuite jusqu'à 48h avant</p>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- MODALITES -->
-  <section id="modalites">
-    <div class="container fade-in">
-      <h2>Prendre rendez-vous</h2>
-      <div class="modalites-grid">
-        <div class="modalite-card">
-          <p style="font-size:2rem; margin-bottom:0.6rem;">🏢</p>
-          <h3>Séance au cabinet</h3>
-          <p class="modalite-sub">Le mercredi</p>
-          <p class="modalite-adresse">116 rue Vauban, 69006 Lyon</p>
-          <a href="https://www.doctolib.fr/psychologue/lyon/richard-samier" class="btn-white-outline" target="_blank" rel="noopener">Réserver sur Doctolib →</a>
-        </div>
-        <div class="modalite-card">
-          <p style="font-size:2rem; margin-bottom:0.6rem;">💻</p>
-          <h3>Séance en visio</h3>
-          <p class="modalite-sub">Tous les jours</p>
-          <p class="modalite-adresse">Via Google Meet · Partout en France</p>
-          <a href="https://calendly.com/richardsamier-psy/1to1" class="btn-white-outline" target="_blank" rel="noopener">Réserver →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- FAQ -->
-  <section id="faq">
-    <div class="container fade-in">
-      <h2>Questions fréquentes</h2>
-      <div class="faq-list">
-        <details>
-          <summary>Qu'est-ce que la thérapie cognitive et comportementale (TCC) ?</summary>
-          <div class="faq-answer">Les TCC sont des thérapies brèves, structurées et validées scientifiquement. Elles agissent sur les pensées automatiques négatives, les émotions et les comportements qui entretiennent la souffrance. L'objectif est de développer des stratégies concrètes pour aller mieux durablement, dans une logique d'autonomie et de prévention.</div>
-        </details>
-        <details>
-          <summary>Comment se déroule la première consultation ?</summary>
-          <div class="faq-answer">La première consultation dure 45 minutes et coûte 50€. Elle permet de se rencontrer, de comprendre votre situation, vos enjeux et vos ressources, dans un cadre d'écoute et de non-jugement. Il n'y a aucun engagement : vous restez libre à chaque étape.</div>
-        </details>
-        <details>
-          <summary>Les consultations sont-elles remboursées ?</summary>
-          <div class="faq-answer">Les consultations ne sont pas remboursées par l'Assurance Maladie. Cependant, certaines mutuelles proposent une prise en charge partielle. Renseignez-vous auprès de votre complémentaire santé avant le rendez-vous.</div>
-        </details>
-        <details>
-          <summary>Proposez-vous des consultations en ligne ?</summary>
-          <div class="faq-answer">Oui, je propose des séances en téléconsultation via Google Meet, tous les jours de la semaine. Ces séances sont accessibles depuis toute la France, depuis chez vous en toute confidentialité.</div>
-        </details>
-        <details>
-          <summary>Où se situe le cabinet à Lyon ?</summary>
-          <div class="faq-answer">Le cabinet est situé au 116 rue Vauban, 69006 Lyon (6e arrondissement). Les consultations en cabinet ont lieu le mercredi. Pour les autres jours, les séances se déroulent en visio.</div>
-        </details>
-        <details>
-          <summary>Combien de séances sont nécessaires ?</summary>
-          <div class="faq-answer">Le nombre de séances varie selon chaque personne et chaque situation. Les TCC sont des thérapies brèves, orientées vers des objectifs concrets. Nous définissons ensemble le rythme et la durée du suivi, qui peut aller de quelques séances à plusieurs mois selon vos besoins.</div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container fade-in">
-      <h2>Contact</h2>
-      <div class="contact-grid">
-        <div class="contact-item">
-          <span class="contact-label">Téléphone</span>
-          <a href="tel:+33609520666" class="contact-value">06 09 52 06 66</a>
-        </div>
-        <div class="contact-item">
-          <span class="contact-label">Email</span>
-          <a href="mailto:richardsamier.psy@gmail.com" class="contact-value">richardsamier.psy@gmail.com</a>
-        </div>
-        <div class="contact-item">
-          <span class="contact-label">Cabinet</span>
-          <span class="contact-value">116 rue Vauban, 69006 Lyon</span>
-        </div>
-      </div>
-      <p class="rpps-note">Richard Samier · Psychologue · RPPS n° 10109835404 · Université Paris 8 · Thérapies Cognitivo-Comportementales (TCC)</p>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Richard Samier — Psychologue TCC · Lyon 6 · <a href="mailto:richardsamier.psy@gmail.com">richardsamier.psy@gmail.com</a></p>
-  </footer>
-
-  <!-- STICKY MOBILE CTA -->
-  <div class="sticky-cta">
-    <a href="https://www.doctolib.fr/psychologue/lyon/richard-samier" target="_blank" rel="noopener">Prendre rendez-vous sur Doctolib</a>
-  </div>
-
-  <script>
-    // Scroll fade-in
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-  </script>
-
+<p class="p1"><span class="s1">Richard Samier</span></p>
+<ul class="ul1">
+  <li class="li2"><span class="s2"></span><span class="s1">Qui suis-je</span></li>
+  <li class="li2"><span class="s2"></span><span class="s1">Spécialités</span></li>
+  <li class="li2"><span class="s2"></span><span class="s1">Comment je travaille</span></li>
+  <li class="li2"><span class="s2"></span><span class="s1">Tarifs</span></li>
+  <li class="li3"><span class="s3"></span><span class="s4">FAQ</span></li>
+  <li class="li4"><span class="s2"><a href="file:///"><span class="s5">FR</span></a></span><span class="s6"><br>
+</span><span class="s7">· <a href="file:///en/"><span class="s8">EN</span></a></span></li>
+  <li class="li5"><span class="s9"><a href="https://www.doctolib.fr/psychologue/lyon/richard-samier"><span class="s8">Prendre RDV</span></a></span></li>
+</ul>
+<p class="p6"><span class="s10">PSYCHOLOGUE À LYON 6 · BURNOUT · ANXIÉTÉ · SENS</span></p>
+<h1 style="margin: 0.0px 0.0px 16.8px 0.0px; font: 32.0px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414"><span class="s10">"Je vais bien, mais..."</span></h1>
+<p class="p8"><span class="s10">Parfois, on se réveille épuisé sans vraiment savoir pourquoi. On doute, on s'inquiète, on perd le fil. Dans un espace confidentiel et sans jugement, je vous aide à mieux comprendre ce que vous traversez et à aller mieux.</span></p>
+<p class="p9"><span class="s8">Burn-out</span></p>
+<p class="p9"><span class="s8">Bored-out</span></p>
+<p class="p9"><span class="s8">Anxiété</span></p>
+<p class="p9"><span class="s8">Stress</span></p>
+<p class="p9"><span class="s8">Sens au travail</span></p>
+<p class="p9"><span class="s8">Thérapie Cognitivo-Comportementale (TCC)</span></p>
+<p class="p9"><span class="s8">Thérapie brève</span></p>
+<p class="p9"><span class="s8">Équilibre pro-perso</span></p>
+<p class="p9"><span class="s8">Régulation des émotions</span></p>
+<p class="p9"><span class="s8">Motivation</span></p>
+<p class="p9"><span class="s8">Charge mentale</span></p>
+<p class="p9"><span class="s8">Confiance en soi</span></p>
+<p class="p10"><span class="s11"><a href="https://www.doctolib.fr/psychologue/lyon/richard-samier">🏢<span class="s12"> Cabinet (mercredi)</span></a></span></p>
+<p class="p11"><span class="s13"><a href="https://calendly.com/richardsamier-psy/1to1">💻<span class="s12"> Visio (tous les jours)</span></a></span></p>
+<p class="p12"><span class="s10">En savoir plus ↓</span></p>
+<p class="p13"><span class="s8"><img src="file:///Attachment.png" alt="Attachment.png"></span></p>
+<p class="p14"><span class="s8"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 16.8px 0.0px; font: 23.4px 'Helvetica Neue'; color: #136959; -webkit-text-stroke: #136959"><span class="s14">Qui suis-je ?</span></h2>
+<p class="p16"><span class="s15">"J'ai passé six ans dans des start-ups à observer de l'intérieur ce que le monde du travail fait aux gens. C'est en grande partie ce qui m'a amené à exercer la psychologie."</span></p>
+<p class="p17"><span class="s14">Psychologue clinicien (RPPS n° 10109835404), diplômé de l'Université Paris 8, je suis spécialisé en Thérapies Cognitivo-Comportementales (TCC). J'exerce en cabinet à Lyon 6 et en téléconsultation.</span></p>
+<p class="p18"><span class="s14">Avant de me consacrer pleinement à la pratique clinique, j'ai évolué pendant près de six ans au cœur de l'écosystème start-up français, dans des fonctions mêlant analyse, accompagnement et structuration. Ces expériences m'ont permis d'observer de près les enjeux humains liés à la performance, à la charge mentale, à la difficulté à poser des limites et à la fatigue invisible dans des environnements professionnels exigeants.</span></p>
+<p class="p14"><span class="s8"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 16.8px 0.0px; font: 23.4px 'Helvetica Neue'; color: #136959; -webkit-text-stroke: #136959"><span class="s14">Le cabinet</span></h2>
+<p class="p17"><span class="s14">Un espace calme et confidentiel au 116 rue Vauban, Lyon 6e — conçu pour que vous puissiez vous poser et parler librement.</span></p>
+<p class="p19"><span class="s8"><img src="file:///Attachment.png" alt="Attachment.png"></span></p>
+<p class="p19"><span class="s8"><img src="file:///Attachment.png" alt="Attachment.png"></span></p>
+<h2 style="margin: 0.0px 0.0px 16.8px 0.0px; font: 23.4px 'Helvetica Neue'; color: #136959; -webkit-text-stroke: #136959"><span class="s10">Ce que j'accompagne</span></h2>
+<p class="p17"><span class="s10">Les gens qui arrivent en première séance ont souvent du mal à mettre des mots sur ce qui ne va pas. Ils savent que quelque chose coince — dans leur travail, dans leur tête, dans leur quotidien — mais pas toujours où exactement.</span></p>
+<p class="p17"><span class="s10">C'est souvent là que ça commence : un épuisement qui s'installe, une anxiété qui tourne en boucle, un sentiment de ne plus trouver sa place, une difficulté à poser des limites. Pas forcément une crise. Juste quelque chose qui pèse.</span></p>
+<p class="p18"><span class="s10">J'accompagne principalement des adultes sur des problématiques liées au travail et à la vie personnelle — burn-out, bored-out, stress, anxiété, perte de sens, charge mentale, confiance en soi, régulation des émotions, équilibre pro-perso.</span></p>
+<p class="p14"><span class="s8"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 16.8px 0.0px; font: 23.4px 'Helvetica Neue'; color: #136959; -webkit-text-stroke: #136959"><span class="s14">Comment je travaille</span></h2>
+<p class="p17"><span class="s14">La première séance, je pose beaucoup de questions. Mon objectif : comprendre où ça bloque vraiment, où est la souffrance. Pas pour coller une étiquette, mais pour qu'on puisse définir ensemble un objectif concret — et surtout vérifier qu'on peut travailler ensemble. Parce que la relation compte autant que la méthode.</span></p>
+<p class="p17"><span class="s14">Je travaille avec mon franc-parler, parfois de l'humour, et surtout un vrai échange — pas un monologue de psy derrière son bureau. Les séances s'articulent autour de ce que vous vivez concrètement, pas de théories abstraites.</span></p>
+<p class="p17"><span class="s14">Mon cadre de référence, ce sont les Thérapies Cognitivo-Comportementales (TCC) — des thérapies brèves, validées scientifiquement, qui travaillent sur le lien entre ce qu'on pense, ce qu'on ressent et ce qu'on fait. Pas pour "positiver" ou effacer ce qui est difficile, mais pour comprendre ce qui se joue et trouver des leviers concrets pour aller mieux.</span></p>
+<p class="p18"><span class="s14">Ce qui m'intéresse, c'est de vous aider à développer vos propres clés de lecture — pour que vous n'ayez plus besoin de moi.</span></p>
+<h2 style="margin: 0.0px 0.0px 7.2px 0.0px; text-align: center; font: 23.4px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff"><span class="s16">Vous voulez en savoir plus avant de vous lancer ?</span></h2>
+<p class="p21"><span class="s16">N'hésitez pas à m'envoyer un message — ou à réserver directement une première séance, sans engagement.</span></p>
+<p class="p22"><span class="s11"><a href="https://www.doctolib.fr/psychologue/lyon/richard-samier">🏢<span class="s17"> Cabinet sur Doctolib →</span></a></span></p>
+<p class="p23"><span class="s18"><a href="https://calendly.com/richardsamier-psy/1to1">💻<span class="s12"> Visio →</span></a></span></p>
+<p class="p14"><span class="s8"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 16.8px 0.0px; font: 23.4px 'Helvetica Neue'; color: #136959; -webkit-text-stroke: #136959"><span class="s10">Tarifs</span></h2>
+<p class="p24"><span class="s10">1ÈRE CONSULTATION</span></p>
+<p class="p25"><span class="s10">50 €</span></p>
+<p class="p26"><span class="s10">45 min · Évaluation et clarification de la demande</span></p>
+<p class="p24"><span class="s14">SÉANCE DE SUIVI</span></p>
+<p class="p25"><span class="s14">70 €</span></p>
+<p class="p26"><span class="s14">45 min · Séances individuelles régulières</span></p>
+<p class="p27"><span class="s19">ℹ️</span><span class="s8"> Non remboursé par l'Assurance Maladie. Certaines mutuelles proposent une prise en charge partielle — renseignez-vous auprès de votre mutuelle.</span></p>
+<p class="p14"><span class="s8"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 16.8px 0.0px; font: 23.4px 'Helvetica Neue'; color: #136959; -webkit-text-stroke: #136959"><span class="s14">La première séance</span></h2>
+<p class="p17"><span class="s14">Prendre rendez-vous avec un psy, c'est déjà un acte. Ça peut faire peur, ou simplement demander du courage. C'est normal.</span></p>
+<p class="p17"><span class="s14">La première séance dure 45 minutes. On se rencontre, je pose des questions, j'essaie de comprendre votre situation, ce qui coince, où est la souffrance. À la fin, on définit ensemble un objectif — et on voit si on peut travailler ensemble. Il n'y a aucun engagement au-delà de ce premier rendez-vous.</span></p>
+<p class="p28"><span class="s14">Première séance : 50 € · Séances de suivi : 70 € · Règlement par chèque, virement ou espèces · Annulation gratuite jusqu'à 48h avant</span></p>
+<p class="p14"><span class="s8"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 16.8px 0.0px; font: 23.4px 'Helvetica Neue'; color: #136959; -webkit-text-stroke: #136959"><span class="s10">Prendre rendez-vous</span></h2>
+<p class="p29"><span class="s10">🏢</span></p>
+<h3 style="margin: 0.0px 0.0px 3.0px 0.0px; font: 12.6px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414"><span class="s10">Séance au cabinet</span></h3>
+<p class="p31"><span class="s10">Le mercredi</span></p>
+<p class="p32"><span class="s10">116 rue Vauban, 69006 Lyon</span></p>
+<p class="p33"><span class="s8"><a href="https://www.doctolib.fr/psychologue/lyon/richard-samier">Réserver sur Doctolib →<span class="s20"></span></a></span></p>
+<p class="p29"><span class="s10">💻</span></p>
+<h3 style="margin: 0.0px 0.0px 3.0px 0.0px; font: 12.6px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414"><span class="s10">Séance en visio</span></h3>
+<p class="p31"><span class="s10">Tous les jours</span></p>
+<p class="p32"><span class="s10">Via Google Meet · Partout en France</span></p>
+<p class="p33"><span class="s8"><a href="https://calendly.com/richardsamier-psy/1to1">Réserver →<span class="s20"></span></a></span></p>
+<p class="p14"><span class="s8"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 16.8px 0.0px; font: 23.4px 'Helvetica Neue'; color: #136959; -webkit-text-stroke: #136959"><span class="s14">Questions fréquentes</span></h2>
+<p class="p34"><span class="s10">Qu'est-ce que la thérapie cognitive et comportementale (TCC) ?</span></p>
+<p class="p35"><span class="s10">Les TCC sont des thérapies brèves, structurées et validées scientifiquement. Elles agissent sur les pensées automatiques négatives, les émotions et les comportements qui entretiennent la souffrance. L'objectif est de développer des stratégies concrètes pour aller mieux durablement, dans une logique d'autonomie et de prévention.</span></p>
+<p class="p34"><span class="s10">Comment se déroule la première consultation ?</span></p>
+<p class="p35"><span class="s10">La première consultation dure 45 minutes et coûte 50€. Elle permet de se rencontrer, de comprendre votre situation, vos enjeux et vos ressources, dans un cadre d'écoute et de non-jugement. Il n'y a aucun engagement : vous restez libre à chaque étape.</span></p>
+<p class="p34"><span class="s10">Les consultations sont-elles remboursées ?</span></p>
+<p class="p35"><span class="s10">Les consultations ne sont pas remboursées par l'Assurance Maladie. Cependant, certaines mutuelles proposent une prise en charge partielle. Renseignez-vous auprès de votre complémentaire santé avant le rendez-vous.</span></p>
+<p class="p34"><span class="s10">Proposez-vous des consultations en ligne ?</span></p>
+<p class="p35"><span class="s10">Oui, je propose des séances en téléconsultation via Google Meet, tous les jours de la semaine. Ces séances sont accessibles depuis toute la France, depuis chez vous en toute confidentialité.</span></p>
+<p class="p34"><span class="s10">Où se situe le cabinet à Lyon ?</span></p>
+<p class="p35"><span class="s10">Le cabinet est situé au 116 rue Vauban, 69006 Lyon (6e arrondissement). Les consultations en cabinet ont lieu le mercredi. Pour les autres jours, les séances se déroulent en visio.</span></p>
+<p class="p34"><span class="s10">Combien de séances sont nécessaires ?</span></p>
+<p class="p35"><span class="s10">Le nombre de séances varie selon chaque personne et chaque situation. Les TCC sont des thérapies brèves, orientées vers des objectifs concrets. Nous définissons ensemble le rythme et la durée du suivi, qui peut aller de quelques séances à plusieurs mois selon vos besoins.</span></p>
+<p class="p14"><span class="s8"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 16.8px 0.0px; font: 23.4px 'Helvetica Neue'; color: #136959; -webkit-text-stroke: #136959"><span class="s10">Contact</span></h2>
+<p class="p36"><span class="s10">TÉLÉPHONE</span></p>
+<p class="p37"><span class="s10"><a href="tel:+33609520666">06 09 52 06 66<span class="s21"></span></a></span></p>
+<p class="p36"><span class="s10">EMAIL</span></p>
+<p class="p37"><span class="s10"><a href="mailto:richardsamier.psy@gmail.com">richardsamier.psy@gmail.com<span class="s21"></span></a></span></p>
+<p class="p36"><span class="s10">CABINET</span></p>
+<p class="p37"><span class="s10">116 rue Vauban, 69006 Lyon</span></p>
+<p class="p38"><span class="s10">Richard Samier · Psychologue · RPPS n° 10109835404 · Université Paris 8 · Thérapies Cognitivo-Comportementales (TCC)</span></p>
+<p class="p39"><span class="s22">© 2025 Richard Samier — Psychologue TCC · Lyon 6 · <a href="mailto:richardsamier.psy@gmail.com"><span class="s23">richardsamier.psy@gmail.com</span></a></span></p>
 </body>
 </html>
