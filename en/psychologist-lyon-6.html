@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>English-speaking Psychologist in Lyon 6 — rue Vauban | Richard Samier</title>
-  <meta name="description" content="Psychology practice at 116 rue Vauban, Lyon 6. CBT sessions in English for adults on Wednesdays: burnout, anxiety, professional exhaustion. Access, fees and booking." />
+  <title>English-speaking Psychologist in Lyon 6 | Richard Samier</title>
+  <meta name="description" content="English-speaking psychologist at 116 rue Vauban, Lyon 6. CBT sessions for adults on Wednesdays: burnout, anxiety. Access, fees and booking." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.richardsamier.com/en/psychologist-lyon-6" />
   <link rel="alternate" hreflang="fr" href="https://www.richardsamier.com/psychologue-lyon-6" />
   <link rel="alternate" hreflang="en" href="https://www.richardsamier.com/en/psychologist-lyon-6" />
+  <link rel="alternate" hreflang="x-default" href="https://www.richardsamier.com/psychologue-lyon-6" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="shortcut icon" href="/favicon.svg" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Psychologist in Lyon 6 — rue Vauban practice" />
-  <meta property="og:description" content="Psychology practice at 116 rue Vauban, Lyon 6. CBT sessions in English for adults on Wednesdays: burnout, anxiety, professional exhaustion. Access, fees and booking." />
+  <meta property="og:description" content="English-speaking psychologist at 116 rue Vauban, Lyon 6. CBT sessions for adults on Wednesdays: burnout, anxiety. Access, fees and booking." />
   <meta property="og:url" content="https://www.richardsamier.com/en/psychologist-lyon-6" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_US" />
@@ -25,7 +26,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Psychologist in Lyon 6 — rue Vauban practice" />
-  <meta name="twitter:description" content="Psychology practice at 116 rue Vauban, Lyon 6. CBT sessions in English for adults on Wednesdays: burnout, anxiety, professional exhaustion. Access, fees and booking." />
+  <meta name="twitter:description" content="English-speaking psychologist at 116 rue Vauban, Lyon 6. CBT sessions for adults on Wednesdays: burnout, anxiety. Access, fees and booking." />
   <meta name="twitter:image" content="https://www.richardsamier.com/og-image.jpg" />
 
   <script type="application/ld+json">
@@ -710,6 +711,119 @@
     .texte-lien:hover { border-color: var(--green); }
     .contact-value + .contact-value { margin-top: 0.5rem; }
 
+    /* ── SOUS-MENUS ── */
+    .nav-drop { position: relative; }
+    .nav-drop-btn {
+      font-family: inherit;
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--text-mid);
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: color 0.2s;
+    }
+    .nav-drop-btn:hover, .nav-drop-btn.actif { color: var(--green); }
+    .nav-drop-btn.actif { font-weight: 500; }
+    .nav-drop-btn::after {
+      content: "";
+      width: 0.36rem;
+      height: 0.36rem;
+      border-right: 1.5px solid currentColor;
+      border-bottom: 1.5px solid currentColor;
+      transform: translateY(-2px) rotate(45deg);
+    }
+    .nav-sub {
+      display: none;
+      position: absolute;
+      top: calc(100% + 14px);
+      left: -0.9rem;
+      min-width: 230px;
+      list-style: none;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.09);
+      padding: 0.4rem;
+    }
+    .nav-sub::before { content: ""; position: absolute; left: 0; right: 0; top: -16px; height: 16px; }
+    .nav-drop:hover .nav-sub, .nav-drop:focus-within .nav-sub, .nav-drop.open .nav-sub { display: block; }
+    .nav-links .nav-sub a { display: block; padding: 0.55rem 0.8rem; border-radius: 6px; font-size: 0.88rem; }
+    .nav-links .nav-sub a:hover { background: var(--green-light); }
+    @media (max-width: 1000px) {
+      .nav-drop-btn { font-size: 0.8rem; }
+    }
+    @media (max-width: 880px) {
+      .nav-links { max-height: calc(100vh - 62px); overflow-y: auto; }
+      .nav-drop-btn {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 0.85rem 0 0.3rem;
+        font-size: 0.95rem;
+        color: var(--text-mid);
+        cursor: default;
+      }
+      .nav-drop-btn::after { display: none; }
+      .nav-sub {
+        display: block;
+        position: static;
+        min-width: 0;
+        border: none;
+        box-shadow: none;
+        background: transparent;
+        padding: 0 0 0.5rem 1rem;
+      }
+      .nav-sub::before { display: none; }
+      .nav-links .nav-sub li { border-bottom: none; }
+      .nav-links .nav-sub li > a { padding: 0.45rem 0; font-size: 0.92rem; }
+      .nav-links .nav-sub a:hover { background: transparent; }
+    }
+
+    /* ── EN-TÊTE DES PAGES INTÉRIEURES ── */
+    .page-head { position: relative; overflow: hidden; background: var(--green); padding: 3.2rem 2rem 3.2rem; }
+    .page-head::before, .page-head::after { content: ""; position: absolute; border-radius: 50%; pointer-events: none; }
+    .page-head::before { width: 460px; height: 460px; right: -120px; top: -270px; background: rgba(0,0,0,0.09); }
+    .page-head::after { width: 260px; height: 260px; right: 70px; bottom: -200px; background: rgba(255,255,255,0.07); }
+    .page-head .container { position: relative; z-index: 1; }
+    .page-head .fil { color: rgba(255,255,255,0.65); margin-bottom: 1.6rem; }
+    .page-head .fil a { color: rgba(255,255,255,0.85); border-bottom-color: rgba(255,255,255,0.3); }
+    .page-head .fil a:hover { color: var(--white); border-color: var(--white); }
+    .page-head .hero-eyebrow { color: rgba(255,255,255,0.72); margin-bottom: 0.9rem; }
+    .page-head h1 { color: var(--white); font-size: clamp(1.8rem, 3.6vw, 2.5rem); margin-bottom: 1.1rem; max-width: 760px; }
+    .page-head .page-lead { color: rgba(255,255,255,0.88); font-size: 1.02rem; max-width: 680px; margin-bottom: 0; }
+    .page-head .page-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 1.2rem; margin-top: 1.8rem; }
+    .page-head .lien-clair {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.9rem;
+      border-bottom: 1px solid rgba(255,255,255,0.4);
+      padding-bottom: 1px;
+    }
+    .page-head .lien-clair:hover { border-color: var(--white); }
+    h1 .hero-eyebrow { display: block; font-family: 'Inter', sans-serif; line-height: 1.7; }
+    .auteur { font-size: 0.82rem; color: var(--text-light); margin-bottom: 1.6rem; }
+    .references { list-style: none; padding: 0; }
+    .references li { font-size: 0.88rem; color: var(--text-mid); padding: 0.35rem 0 0.35rem 1.2rem; text-indent: -1.2rem; }
+    .references em { font-style: italic; }
+    .lieux-grid.trois { grid-template-columns: repeat(3, 1fr); scroll-margin-top: 90px; }
+    .lieux-grid.trois .lieu-card { padding: 1.5rem 1.4rem; }
+    @media (max-width: 860px) {
+      .lieux-grid.trois { grid-template-columns: 1fr; }
+    }
+    .autres-jours { font-size: 0.97rem; }
+    .autres-jours strong { font-weight: 500; color: var(--text); }
+    @media (max-width: 640px) {
+      .page-head { padding: 2.4rem 1.5rem 2.6rem; }
+      .page-head::before { width: 300px; height: 300px; right: -140px; top: -180px; }
+      .page-head::after { display: none; }
+    }
+
     /* ── PAGES DE CONTENU ── */
     .tarifs-grid.une { grid-template-columns: minmax(0, 440px); }
     .liste { list-style: none; padding: 0; margin: 0 0 1.2rem; }
@@ -925,9 +1039,17 @@
     <div class="nav-inner">
       <a class="nav-name" href="/en/">Richard Samier</a>
       <ul class="nav-links" id="nav-links">
-        <li><a href="/en/">Home</a></li>
-        <li><a href="/en/psychologist-lyon-6" class="actif" aria-current="page">Lyon 6 practice</a></li>
-        <li><a href="/en/psychologist-lyon-9">Lyon 9 practice</a></li>
+        <li><a href="/en/#about">About me</a></li>
+        <li class="nav-drop">
+          <button type="button" class="nav-drop-btn actif" aria-haspopup="true" aria-expanded="false">Locations</button>
+          <ul class="nav-sub">
+            <li><a href="/en/#cabinet">Days and hours</a></li>
+            <li><a href="/en/psychologist-lyon-6" class="actif" aria-current="page">Lyon 6 — rue Vauban</a></li>
+            <li><a href="/en/psychologist-lyon-9">Lyon 9 — TSA3</a></li>
+          </ul>
+        </li>
+        <li><a href="/en/#specialites">Specialties</a></li>
+        <li><a href="/en/#approche">How I work</a></li>
         <li><a href="/en/#tarifs">Fees</a></li>
         <li><a href="/en/#faq">FAQ</a></li>
         <li class="nav-lang"><a href="/psychologue-lyon-6">FR</a> · <a href="/en/psychologist-lyon-6" class="active">EN</a></li>
@@ -940,31 +1062,23 @@
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-inner">
-      <div>
-        <p class="fil"><a href="/en/">Home</a> › Psychologist in Lyon 6</p>
-        <p class="hero-eyebrow">Lyon 6 practice · Wednesdays</p>
-        <h1>Psychologist in Lyon 6 — rue Vauban practice</h1>
-        <p class="hero-lead">I see clients on Wednesdays at 116 rue Vauban, in Lyon's 6th arrondissement, for individual sessions in Cognitive Behavioral Therapy (CBT), in English or in French.</p>
-        <div class="hero-actions">
-          <a href="https://www.doctolib.fr/psychologue/lyon/richard-samier/booking/motives?specialityId=14&amp;telehealth=false&amp;placeId=practice-808634&amp;source=external_referral" class="btn-primary" target="_blank" rel="noopener">Book on Doctolib →</a>
-          <a href="#infos" class="btn-ghost">Practical information ↓</a>
-        </div>
-      </div>
-      <div class="hero-photo-wrap">
-        <img src="/photo-profil.jpg" alt="Richard Samier, psychologist in Lyon 6" width="180" height="180" />
+  <!-- EN-TÊTE -->
+  <header class="page-head">
+    <div class="container">
+      <p class="fil"><a href="/en/">Home</a> › Locations › Lyon 6</p>
+      <h1><span class="hero-eyebrow">Psychologist · Sessions on Wednesdays</span>Lyon 6 — The rue Vauban practice</h1>
+      <p class="page-lead">I see clients on Wednesdays at 116 rue Vauban, in Lyon's 6th arrondissement, for individual sessions in Cognitive Behavioral Therapy (CBT), in English or in French.</p>
+      <div class="page-actions">
+        <a href="https://www.doctolib.fr/psychologue/lyon/richard-samier/booking/motives?specialityId=14&amp;telehealth=false&amp;placeId=practice-808634&amp;source=external_referral" class="btn-white" target="_blank" rel="noopener">Book on Doctolib →</a>
+        <a href="#infos" class="lien-clair">Practical information ↓</a>
       </div>
     </div>
-  </section>
-
-  <hr class="divider" />
+  </header>
 
   <!-- THE PRACTICE -->
   <section id="cabinet">
     <div class="container fade-in">
-      <h2>The practice</h2>
+      <h2>The space</h2>
       <p>The practice is at 116 rue Vauban, between the Brotteaux and Part-Dieu districts. It is a calm, confidential space, designed so you can settle in and speak freely.</p>
       <p>A waiting room welcomes you when you arrive. The session then takes place in the consultation room, one to one.</p>
       <div class="photos-grid">
@@ -1015,29 +1129,8 @@
 
   <hr class="divider" />
 
-  <!-- WHAT I WORK ON -->
-  <section id="specialites" style="background: var(--bg);">
-    <div class="container fade-in">
-      <h2>What I work on</h2>
-      <p>I mainly work with adults on issues related to work and personal life: a creeping exhaustion, anxiety running in loops, a feeling of no longer fitting in, difficulty setting boundaries. Not necessarily a crisis. Just something weighing on you.</p>
-      <p>My framework is Cognitive Behavioral Therapy (CBT) — a scientifically validated approach that works on the link between what we think, feel, and do.</p>
-      <div class="tags">
-        <span class="tag">Burnout</span>
-        <span class="tag">Bore-out</span>
-        <span class="tag">Anxiety</span>
-        <span class="tag">Stress</span>
-        <span class="tag">Sense of purpose at work</span>
-        <span class="tag">Mental load</span>
-        <span class="tag">Self-confidence</span>
-        <span class="tag">Emotional regulation</span>
-        <span class="tag">Work-life balance</span>
-      </div>
-      <p style="margin-top: 1.6rem;"><a href="/en/#approche" class="texte-lien">How I work</a> · <a href="/en/#premiere" class="texte-lien">What the first session looks like</a></p>
-    </div>
-  </section>
-
   <!-- CTA -->
-  <div class="cta-mid fade-in">
+  <div class="cta-mid fade-in" style="margin-top: 3.5rem; margin-bottom: 3.5rem;">
     <h2>Book a session in Lyon 6</h2>
     <p>The first session lasts 45 minutes, with no commitment beyond this first appointment.</p>
     <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
@@ -1047,27 +1140,10 @@
 
   <hr class="divider" />
 
-  <!-- OTHER OPTIONS -->
-  <section id="modalites">
-    <div class="container fade-in">
-      <h2>Would another day suit you better?</h2>
-      <div class="modalites-grid deux">
-        <div class="modalite-card">
-          <p style="font-size:2rem; margin-bottom:0.6rem;">🏢</p>
-          <h3>Lyon 9 practice</h3>
-          <p class="modalite-sub">Thursdays · 9 am – 5 pm</p>
-          <p class="modalite-adresse">TSA3 · 24 avenue Joannès Masset, 69009 Lyon</p>
-          <a href="https://www.doctolib.fr/psychologue/lyon/richard-samier/booking/motives?specialityId=14&amp;telehealth=false&amp;placeId=practice-847740&amp;source=external_referral" class="btn-white-outline" target="_blank" rel="noopener">Book on Doctolib →</a>
-          <a href="/en/psychologist-lyon-9" class="lien-plus">More about this location</a>
-        </div>
-        <div class="modalite-card">
-          <p style="font-size:2rem; margin-bottom:0.6rem;">💻</p>
-          <h3>Video call session</h3>
-          <p class="modalite-sub">Mondays 2 – 5 pm · Tuesdays and Fridays 9 am – 5 pm</p>
-          <p class="modalite-adresse">Via Google Meet · Anywhere in France</p>
-          <a href="https://calendly.com/richardsamier-psy/1to1" class="btn-white-outline" target="_blank" rel="noopener">Book →</a>
-        </div>
-      </div>
+  <!-- AUTRES JOURS -->
+  <section id="autres" style="padding: 2.6rem 2rem; background: var(--white);">
+    <div class="container">
+      <p class="autres-jours"><strong>Would another day suit you better?</strong> I also see clients in <a href="/en/psychologist-lyon-9" class="texte-lien">Lyon 9</a> on Thursdays (9 am – 5 pm) and via video call on Mondays, Tuesdays and Fridays. <a href="/en/#modalites" class="texte-lien">See all options</a></p>
     </div>
   </section>
 
@@ -1101,33 +1177,12 @@
 
   <hr class="divider" />
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container fade-in">
-      <h2>Contact</h2>
-      <div class="contact-grid">
-        <div class="contact-item">
-          <span class="contact-label">Phone</span>
-          <a href="tel:+33609520666" class="contact-value">+33 6 09 52 06 66</a>
-        </div>
-        <div class="contact-item">
-          <span class="contact-label">Email</span>
-          <a href="mailto:richardsamier.psy@gmail.com" class="contact-value">richardsamier.psy@gmail.com</a>
-        </div>
-        <div class="contact-item">
-          <span class="contact-label">Address</span>
-          <span class="contact-value">116 rue Vauban, 69006 Lyon</span>
-        </div>
-      </div>
-      <p class="rpps-note">Richard Samier · Psychologist · RPPS n° 10109835404 · Université Paris 8 · Cognitive Behavioral Therapy (CBT)</p>
-    </div>
-  </section>
-
 
   <!-- FOOTER -->
   <footer>
     <p><a href="/en/psychologist-lyon-6">Psychologist in Lyon 6</a> · <a href="/en/psychologist-lyon-9">Psychologist in Lyon 9</a> · <a href="/mentions-legales" hreflang="fr">Legal notice (in French)</a></p>
-    <p>© 2026 Richard Samier — CBT Psychologist · <a href="mailto:richardsamier.psy@gmail.com">richardsamier.psy@gmail.com</a></p>
+    <p><a href="tel:+33609520666">+33 6 09 52 06 66</a> · <a href="mailto:richardsamier.psy@gmail.com">richardsamier.psy@gmail.com</a></p>
+    <p>© 2026 Richard Samier — CBT Psychologist · RPPS n° 10109835404</p>
   </footer>
 
   <!-- STICKY MOBILE CTA -->
@@ -1154,6 +1209,24 @@
       navLinks.addEventListener('click', (e) => { if (e.target.closest('a')) setOpen(false); });
       document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
     }
+
+    // Sous-menus
+    const closeDrops = () => document.querySelectorAll('.nav-drop.open').forEach((el) => {
+      el.classList.remove('open');
+      el.querySelector('.nav-drop-btn').setAttribute('aria-expanded', 'false');
+    });
+    document.querySelectorAll('.nav-drop-btn').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        const item = btn.parentElement;
+        const open = !item.classList.contains('open');
+        closeDrops();
+        item.classList.toggle('open', open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        e.stopPropagation();
+      });
+    });
+    document.addEventListener('click', closeDrops);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDrops(); });
   </script>
 
 </body>

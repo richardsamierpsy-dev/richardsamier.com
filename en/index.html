@@ -4,12 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Richard Samier — CBT Psychologist in Lyon 6 &amp; Lyon 9 | Burnout, Anxiety</title>
-  <meta name="description" content="Psychologist in Lyon, specialized in Cognitive Behavioral Therapy (CBT). Support for adults: burnout, anxiety, professional exhaustion. In-person sessions in Lyon 6 and Lyon 9, and teleconsultation." />
+  <meta name="description" content="CBT psychologist in Lyon 6 and Lyon 9. Support for adults: burnout, anxiety, professional exhaustion. In-person sessions and video consultations." />
   <meta name="keywords" content="psychologist Lyon, English-speaking psychologist Lyon, CBT Lyon, cognitive behavioral therapy Lyon, burnout Lyon, anxiety Lyon, professional exhaustion Lyon, online psychologist Lyon" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.richardsamier.com/en/" />
   <link rel="alternate" hreflang="fr" href="https://www.richardsamier.com/" />
   <link rel="alternate" hreflang="en" href="https://www.richardsamier.com/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.richardsamier.com/" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="shortcut icon" href="/favicon.svg" />
 
@@ -40,6 +41,8 @@
     "telephone": "+33609520666",
     "email": "richardsamier.psy@gmail.com",
     "identifier": "RPPS 10109835404",
+    "image": "https://www.richardsamier.com/photo-profil.jpg",
+    "sameAs": ["https://www.doctolib.fr/psychologue/lyon/richard-samier"],
     "address": [
       {
         "@type": "PostalAddress",
@@ -81,6 +84,43 @@
         }
       ]
     }
+  }
+  </script>
+
+  <!-- Schema.org Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Richard Samier",
+    "jobTitle": "Psychologist",
+    "url": "https://www.richardsamier.com/",
+    "image": "https://www.richardsamier.com/photo-profil.jpg",
+    "identifier": "RPPS 10109835404",
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Université Paris 8 - Vincennes Saint-Denis"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Trinity Business School, Trinity College Dublin"
+      }
+    ],
+    "knowsAbout": [
+      "Cognitive Behavioral Therapy (CBT)",
+      "Burnout",
+      "Anxiety",
+      "Work-related stress",
+      "Mental health at work"
+    ],
+    "knowsLanguage": [
+      "fr",
+      "en"
+    ],
+    "sameAs": [
+      "https://www.doctolib.fr/psychologue/lyon/richard-samier"
+    ]
   }
   </script>
 
@@ -716,6 +756,119 @@
     .texte-lien:hover { border-color: var(--green); }
     .contact-value + .contact-value { margin-top: 0.5rem; }
 
+    /* ── SOUS-MENUS ── */
+    .nav-drop { position: relative; }
+    .nav-drop-btn {
+      font-family: inherit;
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--text-mid);
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: color 0.2s;
+    }
+    .nav-drop-btn:hover, .nav-drop-btn.actif { color: var(--green); }
+    .nav-drop-btn.actif { font-weight: 500; }
+    .nav-drop-btn::after {
+      content: "";
+      width: 0.36rem;
+      height: 0.36rem;
+      border-right: 1.5px solid currentColor;
+      border-bottom: 1.5px solid currentColor;
+      transform: translateY(-2px) rotate(45deg);
+    }
+    .nav-sub {
+      display: none;
+      position: absolute;
+      top: calc(100% + 14px);
+      left: -0.9rem;
+      min-width: 230px;
+      list-style: none;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.09);
+      padding: 0.4rem;
+    }
+    .nav-sub::before { content: ""; position: absolute; left: 0; right: 0; top: -16px; height: 16px; }
+    .nav-drop:hover .nav-sub, .nav-drop:focus-within .nav-sub, .nav-drop.open .nav-sub { display: block; }
+    .nav-links .nav-sub a { display: block; padding: 0.55rem 0.8rem; border-radius: 6px; font-size: 0.88rem; }
+    .nav-links .nav-sub a:hover { background: var(--green-light); }
+    @media (max-width: 1000px) {
+      .nav-drop-btn { font-size: 0.8rem; }
+    }
+    @media (max-width: 880px) {
+      .nav-links { max-height: calc(100vh - 62px); overflow-y: auto; }
+      .nav-drop-btn {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 0.85rem 0 0.3rem;
+        font-size: 0.95rem;
+        color: var(--text-mid);
+        cursor: default;
+      }
+      .nav-drop-btn::after { display: none; }
+      .nav-sub {
+        display: block;
+        position: static;
+        min-width: 0;
+        border: none;
+        box-shadow: none;
+        background: transparent;
+        padding: 0 0 0.5rem 1rem;
+      }
+      .nav-sub::before { display: none; }
+      .nav-links .nav-sub li { border-bottom: none; }
+      .nav-links .nav-sub li > a { padding: 0.45rem 0; font-size: 0.92rem; }
+      .nav-links .nav-sub a:hover { background: transparent; }
+    }
+
+    /* ── EN-TÊTE DES PAGES INTÉRIEURES ── */
+    .page-head { position: relative; overflow: hidden; background: var(--green); padding: 3.2rem 2rem 3.2rem; }
+    .page-head::before, .page-head::after { content: ""; position: absolute; border-radius: 50%; pointer-events: none; }
+    .page-head::before { width: 460px; height: 460px; right: -120px; top: -270px; background: rgba(0,0,0,0.09); }
+    .page-head::after { width: 260px; height: 260px; right: 70px; bottom: -200px; background: rgba(255,255,255,0.07); }
+    .page-head .container { position: relative; z-index: 1; }
+    .page-head .fil { color: rgba(255,255,255,0.65); margin-bottom: 1.6rem; }
+    .page-head .fil a { color: rgba(255,255,255,0.85); border-bottom-color: rgba(255,255,255,0.3); }
+    .page-head .fil a:hover { color: var(--white); border-color: var(--white); }
+    .page-head .hero-eyebrow { color: rgba(255,255,255,0.72); margin-bottom: 0.9rem; }
+    .page-head h1 { color: var(--white); font-size: clamp(1.8rem, 3.6vw, 2.5rem); margin-bottom: 1.1rem; max-width: 760px; }
+    .page-head .page-lead { color: rgba(255,255,255,0.88); font-size: 1.02rem; max-width: 680px; margin-bottom: 0; }
+    .page-head .page-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 1.2rem; margin-top: 1.8rem; }
+    .page-head .lien-clair {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.9rem;
+      border-bottom: 1px solid rgba(255,255,255,0.4);
+      padding-bottom: 1px;
+    }
+    .page-head .lien-clair:hover { border-color: var(--white); }
+    h1 .hero-eyebrow { display: block; font-family: 'Inter', sans-serif; line-height: 1.7; }
+    .auteur { font-size: 0.82rem; color: var(--text-light); margin-bottom: 1.6rem; }
+    .references { list-style: none; padding: 0; }
+    .references li { font-size: 0.88rem; color: var(--text-mid); padding: 0.35rem 0 0.35rem 1.2rem; text-indent: -1.2rem; }
+    .references em { font-style: italic; }
+    .lieux-grid.trois { grid-template-columns: repeat(3, 1fr); scroll-margin-top: 90px; }
+    .lieux-grid.trois .lieu-card { padding: 1.5rem 1.4rem; }
+    @media (max-width: 860px) {
+      .lieux-grid.trois { grid-template-columns: 1fr; }
+    }
+    .autres-jours { font-size: 0.97rem; }
+    .autres-jours strong { font-weight: 500; color: var(--text); }
+    @media (max-width: 640px) {
+      .page-head { padding: 2.4rem 1.5rem 2.6rem; }
+      .page-head::before { width: 300px; height: 300px; right: -140px; top: -180px; }
+      .page-head::after { display: none; }
+    }
+
     /* ── PAGES DE CONTENU ── */
     .tarifs-grid.une { grid-template-columns: minmax(0, 440px); }
     .liste { list-style: none; padding: 0; margin: 0 0 1.2rem; }
@@ -932,7 +1085,14 @@
       <a class="nav-name" href="#">Richard Samier</a>
       <ul class="nav-links" id="nav-links">
         <li><a href="#about">About me</a></li>
-        <li><a href="#cabinet">Locations</a></li>
+        <li class="nav-drop">
+          <button type="button" class="nav-drop-btn" aria-haspopup="true" aria-expanded="false">Locations</button>
+          <ul class="nav-sub">
+            <li><a href="#cabinet">Days and hours</a></li>
+            <li><a href="/en/psychologist-lyon-6">Lyon 6 — rue Vauban</a></li>
+            <li><a href="/en/psychologist-lyon-9">Lyon 9 — TSA3</a></li>
+          </ul>
+        </li>
         <li><a href="#specialites">Specialties</a></li>
         <li><a href="#approche">How I work</a></li>
         <li><a href="#tarifs">Fees</a></li>
@@ -951,8 +1111,7 @@
   <section id="hero">
     <div class="hero-inner">
       <div>
-        <p class="hero-eyebrow">Psychologist in Lyon 6 &amp; Lyon 9 · Burnout · Anxiety · Meaning</p>
-        <h1>"I'm fine, but..."</h1>
+        <h1><span class="hero-eyebrow">Psychologist in Lyon 6 &amp; Lyon 9 · Burnout · Anxiety · Meaning</span>"I'm fine, but..."</h1>
         <p class="hero-lead">Sometimes you wake up exhausted without really knowing why. You doubt yourself, you worry, you lose your footing. In a confidential, judgment-free space, I help you better understand what you're going through and start feeling better.</p>
         <div class="hero-badges">
           <span class="badge">Burnout</span>
@@ -988,7 +1147,7 @@
       <div class="about-highlight">
         "I spent six years in start-ups, watching firsthand what the world of work does to people. That experience is largely what led me to practice psychology."
       </div>
-      <p>Psychologist (RPPS n° 10109835404), graduate of Université Paris 8, I specialize in Cognitive Behavioral Therapy (CBT). I practice in person in Lyon 6 and Lyon 9, and via teleconsultation.</p>
+      <p>Psychologist (RPPS n° 10109835404), graduate of Université Paris 8. My practice is grounded in Cognitive Behavioral Therapy (CBT). I practice in person in Lyon 6 and Lyon 9, and via teleconsultation.</p>
       <p>Before fully dedicating myself to this practice, I spent nearly six years in the heart of the French start-up ecosystem, in roles combining analysis, support, and organizational structuring. These experiences gave me a close-up view of the human stakes behind performance pressure, mental load, the difficulty of setting boundaries, and the invisible fatigue that builds up in demanding professional environments.</p>
       <div class="formations">
         <h3>National and university degrees</h3>
@@ -1020,7 +1179,7 @@
         <div class="jour cabinet"><span class="jour-nom">Thursday</span><span class="jour-lieu">🏢 Lyon 9</span><span class="jour-detail">TSA3</span><span class="jour-detail">9 am – 5 pm</span></div>
         <div class="jour"><span class="jour-nom">Friday</span><span class="jour-lieu">💻 Video call</span><span class="jour-detail">9 am – 5 pm</span></div>
       </div>
-      <div class="lieux-grid">
+      <div class="lieux-grid trois" id="modalites">
         <div class="lieu-card">
           <p class="lieu-jour">Wednesdays · 9:15 am – 8 pm</p>
           <h3>Lyon 6 — rue Vauban</h3>
@@ -1039,6 +1198,15 @@
           <div class="lieu-actions">
             <a href="https://www.doctolib.fr/psychologue/lyon/richard-samier/booking/motives?specialityId=14&amp;telehealth=false&amp;placeId=practice-847740&amp;source=external_referral" class="btn-white-outline" target="_blank" rel="noopener">Book on Doctolib →</a>
             <a href="/en/psychologist-lyon-9" class="lien-plus">About the Lyon 9 practice</a>
+          </div>
+        </div>
+        <div class="lieu-card">
+          <p class="lieu-jour">Mondays, Tuesdays and Fridays</p>
+          <h3>Video call</h3>
+          <p class="lieu-adresse">Via Google Meet · Anywhere in France</p>
+          <p class="lieu-texte">From home, in complete privacy.</p>
+          <div class="lieu-actions">
+            <a href="https://calendly.com/richardsamier-psy/1to1" class="btn-white-outline" target="_blank" rel="noopener">Book →</a>
           </div>
         </div>
       </div>
@@ -1074,17 +1242,6 @@
     </div>
   </section>
 
-  <!-- MID CTA -->
-  <div class="cta-mid fade-in">
-    <h2>Want to know more before getting started?</h2>
-    <p>Feel free to send me a message — or book a first session directly, with no commitment.</p>
-    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-      <a href="https://www.doctolib.fr/psychologue/lyon/richard-samier/booking/motives?specialityId=14&amp;telehealth=false&amp;placeId=practice-808634&amp;source=external_referral" class="btn-white" target="_blank" rel="noopener">🏢 Lyon 6 · Wednesdays →</a>
-      <a href="https://www.doctolib.fr/psychologue/lyon/richard-samier/booking/motives?specialityId=14&amp;telehealth=false&amp;placeId=practice-847740&amp;source=external_referral" class="btn-white" target="_blank" rel="noopener">🏢 Lyon 9 · Thursdays →</a>
-      <a href="https://calendly.com/richardsamier-psy/1to1" class="btn-white-ghost" target="_blank" rel="noopener">💻 Video call →</a>
-    </div>
-  </div>
-
   <hr class="divider" />
 
   <!-- FEES -->
@@ -1096,6 +1253,7 @@
           <p class="tarif-label">Per session</p>
           <p class="tarif-price">70 €</p>
           <p class="tarif-detail">45 min · First consultation and follow-up sessions alike</p>
+          <p class="tarif-detail" style="margin-top: 0.6rem;">Payment by cheque, bank transfer, or cash<br />Free cancellation up to 48h in advance</p>
         </div>
       </div>
       <div class="tarif-note">ℹ️ Not reimbursed by French national health insurance. Some private health insurance plans (mutuelles) offer partial coverage — check with your provider.</div>
@@ -1110,43 +1268,21 @@
       <h2>The first session</h2>
       <p>Booking a session with a psychologist is already a step in itself. It can feel daunting, or simply take some courage. That's normal.</p>
       <p>The first session lasts 45 minutes. We meet, I ask questions, I try to understand your situation, what's stuck, where the distress lies. By the end, we define a goal together — and see whether we can work well together. There's no commitment beyond this first appointment.</p>
-      <p style="color: var(--text-light); font-size: 0.9rem;">Fee: 70 € per session · Payment by cheque, bank transfer, or cash · Free cancellation up to 48h in advance</p>
     </div>
   </section>
 
   <hr class="divider" />
 
-  <!-- BOOKING -->
-  <section id="modalites">
-    <div class="container fade-in">
-      <h2>Book a session</h2>
-      <div class="modalites-grid">
-        <div class="modalite-card">
-          <p style="font-size:2rem; margin-bottom:0.6rem;">🏢</p>
-          <h3>Lyon 6 practice</h3>
-          <p class="modalite-sub">Wednesdays · 9:15 am – 8 pm</p>
-          <p class="modalite-adresse">116 rue Vauban, 69006 Lyon</p>
-          <a href="https://www.doctolib.fr/psychologue/lyon/richard-samier/booking/motives?specialityId=14&amp;telehealth=false&amp;placeId=practice-808634&amp;source=external_referral" class="btn-white-outline" target="_blank" rel="noopener">Book on Doctolib →</a>
-          <a href="/en/psychologist-lyon-6" class="lien-plus">More about this location</a>
-        </div>
-        <div class="modalite-card">
-          <p style="font-size:2rem; margin-bottom:0.6rem;">🏢</p>
-          <h3>Lyon 9 practice</h3>
-          <p class="modalite-sub">Thursdays · 9 am – 5 pm</p>
-          <p class="modalite-adresse">TSA3 · 24 avenue Joannès Masset, 69009 Lyon</p>
-          <a href="https://www.doctolib.fr/psychologue/lyon/richard-samier/booking/motives?specialityId=14&amp;telehealth=false&amp;placeId=practice-847740&amp;source=external_referral" class="btn-white-outline" target="_blank" rel="noopener">Book on Doctolib →</a>
-          <a href="/en/psychologist-lyon-9" class="lien-plus">More about this location</a>
-        </div>
-        <div class="modalite-card">
-          <p style="font-size:2rem; margin-bottom:0.6rem;">💻</p>
-          <h3>Video call session</h3>
-          <p class="modalite-sub">Mondays 2 – 5 pm · Tuesdays and Fridays 9 am – 5 pm</p>
-          <p class="modalite-adresse">Via Google Meet · Anywhere in France</p>
-          <a href="https://calendly.com/richardsamier-psy/1to1" class="btn-white-outline" target="_blank" rel="noopener">Book →</a>
-        </div>
-      </div>
+  <!-- MID CTA -->
+  <div class="cta-mid fade-in" style="margin-top: 3.5rem; margin-bottom: 3.5rem;">
+    <h2>Want to know more before getting started?</h2>
+    <p>Feel free to send me a message — or book a first session directly, with no commitment.</p>
+    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <a href="https://www.doctolib.fr/psychologue/lyon/richard-samier/booking/motives?specialityId=14&amp;telehealth=false&amp;placeId=practice-808634&amp;source=external_referral" class="btn-white" target="_blank" rel="noopener">🏢 Lyon 6 · Wednesdays →</a>
+      <a href="https://www.doctolib.fr/psychologue/lyon/richard-samier/booking/motives?specialityId=14&amp;telehealth=false&amp;placeId=practice-847740&amp;source=external_referral" class="btn-white" target="_blank" rel="noopener">🏢 Lyon 9 · Thursdays →</a>
+      <a href="https://calendly.com/richardsamier-psy/1to1" class="btn-white-ghost" target="_blank" rel="noopener">💻 Video call →</a>
     </div>
-  </section>
+  </div>
 
   <hr class="divider" />
 
@@ -1211,7 +1347,8 @@
   <!-- FOOTER -->
   <footer>
     <p><a href="/en/psychologist-lyon-6">Psychologist in Lyon 6</a> · <a href="/en/psychologist-lyon-9">Psychologist in Lyon 9</a> · <a href="/mentions-legales" hreflang="fr">Legal notice (in French)</a></p>
-    <p>© 2026 Richard Samier — CBT Psychologist · <a href="mailto:richardsamier.psy@gmail.com">richardsamier.psy@gmail.com</a></p>
+    <p><a href="tel:+33609520666">+33 6 09 52 06 66</a> · <a href="mailto:richardsamier.psy@gmail.com">richardsamier.psy@gmail.com</a></p>
+    <p>© 2026 Richard Samier — CBT Psychologist · RPPS n° 10109835404</p>
   </footer>
 
   <!-- STICKY MOBILE CTA -->
@@ -1238,6 +1375,24 @@
       navLinks.addEventListener('click', (e) => { if (e.target.closest('a')) setOpen(false); });
       document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
     }
+
+    // Sous-menus
+    const closeDrops = () => document.querySelectorAll('.nav-drop.open').forEach((el) => {
+      el.classList.remove('open');
+      el.querySelector('.nav-drop-btn').setAttribute('aria-expanded', 'false');
+    });
+    document.querySelectorAll('.nav-drop-btn').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        const item = btn.parentElement;
+        const open = !item.classList.contains('open');
+        closeDrops();
+        item.classList.toggle('open', open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        e.stopPropagation();
+      });
+    });
+    document.addEventListener('click', closeDrops);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDrops(); });
   </script>
 
 </body>
