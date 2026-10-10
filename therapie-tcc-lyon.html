@@ -29,6 +29,32 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Qu'est-ce que la thérapie cognitive et comportementale (TCC) ?",
+    "description": "La TCC expliquée simplement : principe, déroulement d'un suivi, outils utilisés. Psychologue TCC à Lyon 6, Lyon 9 et en visio.",
+    "inLanguage": "fr",
+    "datePublished": "2026-10-10",
+    "dateModified": "2026-10-10",
+    "mainEntityOfPage": "https://www.richardsamier.com/therapie-tcc-lyon",
+    "author": {
+      "@type": "Person",
+      "name": "Richard Samier",
+      "jobTitle": "Psychologue",
+      "url": "https://www.richardsamier.com/",
+      "identifier": "RPPS 10109835404"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Richard Samier",
+      "jobTitle": "Psychologue",
+      "url": "https://www.richardsamier.com/",
+      "identifier": "RPPS 10109835404"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
       {
@@ -669,6 +695,119 @@
     .texte-lien:hover { border-color: var(--green); }
     .contact-value + .contact-value { margin-top: 0.5rem; }
 
+    /* ── SOUS-MENUS ── */
+    .nav-drop { position: relative; }
+    .nav-drop-btn {
+      font-family: inherit;
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--text-mid);
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: color 0.2s;
+    }
+    .nav-drop-btn:hover, .nav-drop-btn.actif { color: var(--green); }
+    .nav-drop-btn.actif { font-weight: 500; }
+    .nav-drop-btn::after {
+      content: "";
+      width: 0.36rem;
+      height: 0.36rem;
+      border-right: 1.5px solid currentColor;
+      border-bottom: 1.5px solid currentColor;
+      transform: translateY(-2px) rotate(45deg);
+    }
+    .nav-sub {
+      display: none;
+      position: absolute;
+      top: calc(100% + 14px);
+      left: -0.9rem;
+      min-width: 230px;
+      list-style: none;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.09);
+      padding: 0.4rem;
+    }
+    .nav-sub::before { content: ""; position: absolute; left: 0; right: 0; top: -16px; height: 16px; }
+    .nav-drop:hover .nav-sub, .nav-drop:focus-within .nav-sub, .nav-drop.open .nav-sub { display: block; }
+    .nav-links .nav-sub a { display: block; padding: 0.55rem 0.8rem; border-radius: 6px; font-size: 0.88rem; }
+    .nav-links .nav-sub a:hover { background: var(--green-light); }
+    @media (max-width: 1000px) {
+      .nav-drop-btn { font-size: 0.8rem; }
+    }
+    @media (max-width: 880px) {
+      .nav-links { max-height: calc(100vh - 62px); overflow-y: auto; }
+      .nav-drop-btn {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 0.85rem 0 0.3rem;
+        font-size: 0.95rem;
+        color: var(--text-mid);
+        cursor: default;
+      }
+      .nav-drop-btn::after { display: none; }
+      .nav-sub {
+        display: block;
+        position: static;
+        min-width: 0;
+        border: none;
+        box-shadow: none;
+        background: transparent;
+        padding: 0 0 0.5rem 1rem;
+      }
+      .nav-sub::before { display: none; }
+      .nav-links .nav-sub li { border-bottom: none; }
+      .nav-links .nav-sub li > a { padding: 0.45rem 0; font-size: 0.92rem; }
+      .nav-links .nav-sub a:hover { background: transparent; }
+    }
+
+    /* ── EN-TÊTE DES PAGES INTÉRIEURES ── */
+    .page-head { position: relative; overflow: hidden; background: var(--green); padding: 3.2rem 2rem 3.2rem; }
+    .page-head::before, .page-head::after { content: ""; position: absolute; border-radius: 50%; pointer-events: none; }
+    .page-head::before { width: 460px; height: 460px; right: -120px; top: -270px; background: rgba(0,0,0,0.09); }
+    .page-head::after { width: 260px; height: 260px; right: 70px; bottom: -200px; background: rgba(255,255,255,0.07); }
+    .page-head .container { position: relative; z-index: 1; }
+    .page-head .fil { color: rgba(255,255,255,0.65); margin-bottom: 1.6rem; }
+    .page-head .fil a { color: rgba(255,255,255,0.85); border-bottom-color: rgba(255,255,255,0.3); }
+    .page-head .fil a:hover { color: var(--white); border-color: var(--white); }
+    .page-head .hero-eyebrow { color: rgba(255,255,255,0.72); margin-bottom: 0.9rem; }
+    .page-head h1 { color: var(--white); font-size: clamp(1.8rem, 3.6vw, 2.5rem); margin-bottom: 1.1rem; max-width: 760px; }
+    .page-head .page-lead { color: rgba(255,255,255,0.88); font-size: 1.02rem; max-width: 680px; margin-bottom: 0; }
+    .page-head .page-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 1.2rem; margin-top: 1.8rem; }
+    .page-head .lien-clair {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.9rem;
+      border-bottom: 1px solid rgba(255,255,255,0.4);
+      padding-bottom: 1px;
+    }
+    .page-head .lien-clair:hover { border-color: var(--white); }
+    h1 .hero-eyebrow { display: block; font-family: 'Inter', sans-serif; line-height: 1.7; }
+    .auteur { font-size: 0.82rem; color: var(--text-light); margin-bottom: 1.6rem; }
+    .references { list-style: none; padding: 0; }
+    .references li { font-size: 0.88rem; color: var(--text-mid); padding: 0.35rem 0 0.35rem 1.2rem; text-indent: -1.2rem; }
+    .references em { font-style: italic; }
+    .lieux-grid.trois { grid-template-columns: repeat(3, 1fr); scroll-margin-top: 90px; }
+    .lieux-grid.trois .lieu-card { padding: 1.5rem 1.4rem; }
+    @media (max-width: 860px) {
+      .lieux-grid.trois { grid-template-columns: 1fr; }
+    }
+    .autres-jours { font-size: 0.97rem; }
+    .autres-jours strong { font-weight: 500; color: var(--text); }
+    @media (max-width: 640px) {
+      .page-head { padding: 2.4rem 1.5rem 2.6rem; }
+      .page-head::before { width: 300px; height: 300px; right: -140px; top: -180px; }
+      .page-head::after { display: none; }
+    }
+
     /* ── PAGES DE CONTENU ── */
     .tarifs-grid.une { grid-template-columns: minmax(0, 440px); }
     .liste { list-style: none; padding: 0; margin: 0 0 1.2rem; }
@@ -884,12 +1023,26 @@
     <div class="nav-inner">
       <a class="nav-name" href="/">Richard Samier</a>
       <ul class="nav-links" id="nav-links">
-        <li><a href="/">Accueil</a></li>
-        <li><a href="/burn-out-psychologue-lyon">Burn-out</a></li>
-        <li><a href="/therapie-tcc-lyon" class="actif" aria-current="page">TCC</a></li>
-        <li><a href="/psychologue-lyon-6">Cabinet Lyon 6</a></li>
-        <li><a href="/psychologue-lyon-9">Cabinet Lyon 9</a></li>
+        <li><a href="/#about">Qui suis-je</a></li>
+        <li class="nav-drop">
+          <button type="button" class="nav-drop-btn" aria-haspopup="true" aria-expanded="false">Cabinets</button>
+          <ul class="nav-sub">
+            <li><a href="/#cabinet">Jours et horaires</a></li>
+            <li><a href="/psychologue-lyon-6">Lyon 6 — rue Vauban</a></li>
+            <li><a href="/psychologue-lyon-9">Lyon 9 — TSA3</a></li>
+          </ul>
+        </li>
+        <li class="nav-drop">
+          <button type="button" class="nav-drop-btn actif" aria-haspopup="true" aria-expanded="false">Spécialités</button>
+          <ul class="nav-sub">
+            <li><a href="/#specialites">Ce que j'accompagne</a></li>
+            <li><a href="/burn-out-psychologue-lyon">Burn-out</a></li>
+            <li><a href="/therapie-tcc-lyon" class="actif" aria-current="page">Thérapie TCC</a></li>
+          </ul>
+        </li>
+        <li><a href="/#approche">Comment je travaille</a></li>
         <li><a href="/#tarifs">Tarifs</a></li>
+        <li><a href="/#faq">FAQ</a></li>
         <li class="nav-cta-item"><a href="/#modalites" class="nav-cta">Prendre RDV</a></li>
       </ul>
       <div class="nav-mobile">
@@ -899,33 +1052,25 @@
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-inner">
-      <div>
-        <p class="fil"><a href="/">Accueil</a> › Thérapie TCC</p>
-        <p class="hero-eyebrow">Thérapies Cognitivo-Comportementales</p>
-        <h1>La thérapie cognitive et comportementale (TCC) à Lyon</h1>
-        <p class="hero-lead">Les TCC partent d'une idée simple : ce qu'on pense, ce qu'on ressent et ce qu'on fait s'influencent en permanence. En travaillant sur ces liens, on peut desserrer ce qui entretient la souffrance.</p>
-        <div class="hero-actions">
-          <a href="/#modalites" class="btn-primary">Prendre rendez-vous</a>
-          <a href="#principe" class="btn-ghost">Lire la suite ↓</a>
-        </div>
-      </div>
-      <div class="hero-photo-wrap">
-        <img src="/photo-profil.jpg" alt="Richard Samier, psychologue à Lyon" width="180" height="180" />
+  <!-- EN-TÊTE -->
+  <header class="page-head">
+    <div class="container">
+      <p class="fil"><a href="/">Accueil</a> › Spécialités › Thérapie TCC</p>
+      <p class="hero-eyebrow">Thérapies Cognitivo-Comportementales</p>
+      <h1>Qu'est-ce que la thérapie cognitive et comportementale (TCC) ?</h1>
+      <p class="page-lead">Les TCC partent d'une idée simple : ce qu'on pense, ce qu'on ressent et ce qu'on fait s'influencent en permanence. En travaillant sur ces liens, on peut desserrer ce qui entretient la souffrance.</p>
+      <div class="page-actions">
+        <a href="/#modalites" class="btn-white">Prendre rendez-vous</a>
       </div>
     </div>
-  </section>
-
-  <hr class="divider" />
+  </header>
 
   <section id="principe" style="background: var(--bg);">
     <div class="container fade-in">
+      <p class="auteur">Par Richard Samier, psychologue (RPPS n° 10109835404) · Mis à jour le 10 octobre 2026</p>
       <h2>Le principe</h2>
       <p>Les Thérapies Cognitivo-Comportementales sont des thérapies structurées et validées scientifiquement. Elles ne cherchent pas à « positiver » ni à effacer ce qui est difficile, mais à comprendre ce qui se joue et à trouver des leviers concrets pour aller mieux.</p>
-      <div class="exemple"><strong>Un exemple.</strong> Votre manager ne répond pas à votre message. Pensée : « j'ai dû faire une erreur ». Émotion : l'anxiété monte. Comportement : vous relisez tout trois fois et restez tard pour compenser. Le lendemain, l'anxiété est toujours là — avec la fatigue en plus.</div>
-      <p>Ce sont ces boucles que l'on apprend à repérer ensemble, puis à modifier.</p>
+      <p>Ce sont ces liens, ces schémas de pensées, que l'on apprend à repérer ensemble, puis à modifier.</p>
     </div>
   </section>
 
@@ -941,29 +1086,6 @@
         <li><strong>Régulièrement.</strong> On fait le point sur l'objectif de départ, et on ajuste si besoin.</li>
       </ul>
       <p>Ce qui m'intéresse, c'est de vous aider à développer vos propres clés de lecture — pour que vous n'ayez plus besoin de moi.</p>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <section id="outils" style="background: var(--bg);">
-    <div class="container fade-in">
-      <h2>Les outils que j'utilise</h2>
-      <ul class="liste">
-        <li><strong>La restructuration cognitive.</strong> Repérer les pensées automatiques, les examiner, et construire des lectures plus justes de la situation.</li>
-        <li><strong>L'exposition progressive.</strong> Se confronter par étapes à ce que l'on évite, pour que l'anxiété perde du terrain.</li>
-        <li><strong>L'activation comportementale.</strong> Remettre du mouvement et des activités qui comptent quand tout s'est rétréci.</li>
-        <li><strong>L'affirmation de soi.</strong> Dire non, poser des limites, faire une demande — et s'y entraîner.</li>
-        <li><strong>La régulation des émotions.</strong> Comprendre ce que l'on ressent et apprendre à faire avec, sans se laisser déborder.</li>
-      </ul>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <section id="pour-qui" style="background: var(--white);">
-    <div class="container fade-in">
-      <h2>Pour quelles difficultés</h2>
       <p>J'accompagne principalement des adultes sur des problématiques liées au travail et à la vie personnelle : <a href="/burn-out-psychologue-lyon" class="texte-lien">burn-out</a>, bored-out, stress, anxiété, perte de sens, charge mentale, confiance en soi, régulation des émotions, équilibre pro-perso.</p>
       <p>La première séance sert justement à vérifier que ce cadre correspond à votre demande. Si ce n'est pas le cas, je vous le dis.</p>
     </div>
@@ -972,7 +1094,7 @@
   <hr class="divider" />
 
   <!-- CTA -->
-  <div class="cta-mid fade-in">
+  <div class="cta-mid fade-in" style="margin-top: 3.5rem; margin-bottom: 3.5rem;">
     <h2>Prendre rendez-vous</h2>
     <p>La première séance dure 45 minutes et n'engage à rien au-delà de ce premier rendez-vous.</p>
     <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
@@ -1012,26 +1134,15 @@
 
   <hr class="divider" />
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container fade-in">
-      <h2>Contact</h2>
-      <div class="contact-grid">
-        <div class="contact-item">
-          <span class="contact-label">Téléphone</span>
-          <a href="tel:+33609520666" class="contact-value">06 09 52 06 66</a>
-        </div>
-        <div class="contact-item">
-          <span class="contact-label">Email</span>
-          <a href="mailto:richardsamier.psy@gmail.com" class="contact-value">richardsamier.psy@gmail.com</a>
-        </div>
-        <div class="contact-item">
-          <span class="contact-label">Cabinets</span>
-          <a href="/psychologue-lyon-6" class="contact-value">Lyon 6 · 116 rue Vauban, 69006 Lyon</a>
-          <a href="/psychologue-lyon-9" class="contact-value">Lyon 9 · TSA3, 24 avenue Joannès Masset, 69009 Lyon</a>
-        </div>
-      </div>
-      <p class="rpps-note">Richard Samier · Psychologue · RPPS n° 10109835404 · Université Paris 8 · Thérapies Cognitivo-Comportementales (TCC)</p>
+  <section id="references" style="background: var(--white); padding: 3rem 2rem;">
+    <div class="container">
+      <h2 style="font-size: 1.15rem; margin-bottom: 0.8rem;">Références</h2>
+      <ul class="references">
+        <li>Beck, A. T. (1976). <em>Cognitive Therapy and the Emotional Disorders</em>. International Universities Press.</li>
+        <li>Beck, A. T., Rush, A. J., Shaw, B. F. et Emery, G. (1979). <em>Cognitive Therapy of Depression</em>. Guilford Press.</li>
+        <li>Hofmann, S. G., Asnaani, A., Vonk, I. J. J., Sawyer, A. T. et Fang, A. (2012). The efficacy of cognitive behavioral therapy: A review of meta-analyses. <em>Cognitive Therapy and Research</em>, 36(5), 427-440.</li>
+        <li>Inserm (2004). <em>Psychothérapie : trois approches évaluées</em>. Expertise collective. Les éditions Inserm.</li>
+      </ul>
     </div>
   </section>
 
@@ -1039,7 +1150,8 @@
   <!-- FOOTER -->
   <footer>
     <p><a href="/psychologue-lyon-6">Psychologue Lyon 6</a> · <a href="/psychologue-lyon-9">Psychologue Lyon 9</a> · <a href="/burn-out-psychologue-lyon">Burn-out</a> · <a href="/therapie-tcc-lyon">TCC</a> · <a href="/mentions-legales">Mentions légales</a></p>
-    <p>© 2026 Richard Samier — Psychologue TCC · <a href="mailto:richardsamier.psy@gmail.com">richardsamier.psy@gmail.com</a></p>
+    <p><a href="tel:+33609520666">06 09 52 06 66</a> · <a href="mailto:richardsamier.psy@gmail.com">richardsamier.psy@gmail.com</a></p>
+    <p>© 2026 Richard Samier — Psychologue TCC · RPPS n° 10109835404</p>
   </footer>
 
   <!-- STICKY MOBILE CTA -->
@@ -1066,6 +1178,24 @@
       navLinks.addEventListener('click', (e) => { if (e.target.closest('a')) setOpen(false); });
       document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
     }
+
+    // Sous-menus
+    const closeDrops = () => document.querySelectorAll('.nav-drop.open').forEach((el) => {
+      el.classList.remove('open');
+      el.querySelector('.nav-drop-btn').setAttribute('aria-expanded', 'false');
+    });
+    document.querySelectorAll('.nav-drop-btn').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        const item = btn.parentElement;
+        const open = !item.classList.contains('open');
+        closeDrops();
+        item.classList.toggle('open', open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        e.stopPropagation();
+      });
+    });
+    document.addEventListener('click', closeDrops);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDrops(); });
   </script>
 
 </body>

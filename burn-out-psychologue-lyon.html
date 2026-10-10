@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Burn-out à Lyon — Accompagnement par un psychologue TCC | Richard Samier</title>
+  <title>Burn-out à Lyon — Psychologue TCC | Richard Samier</title>
   <meta name="description" content="Burn-out, épuisement professionnel : comment je vous accompagne en TCC, à Lyon 6, Lyon 9 ou en visio. Signes, moment où consulter, déroulement du suivi." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.richardsamier.com/burn-out-psychologue-lyon" />
@@ -26,6 +26,32 @@
   <meta name="twitter:description" content="Burn-out, épuisement professionnel : comment je vous accompagne en TCC, à Lyon 6, Lyon 9 ou en visio. Signes, moment où consulter, déroulement du suivi." />
   <meta name="twitter:image" content="https://www.richardsamier.com/og-image.jpg" />
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Burn-out : se faire accompagner par un psychologue à Lyon",
+    "description": "Burn-out, épuisement professionnel : comment je vous accompagne en TCC, à Lyon 6, Lyon 9 ou en visio. Signes, moment où consulter, déroulement du suivi.",
+    "inLanguage": "fr",
+    "datePublished": "2026-10-10",
+    "dateModified": "2026-10-10",
+    "mainEntityOfPage": "https://www.richardsamier.com/burn-out-psychologue-lyon",
+    "author": {
+      "@type": "Person",
+      "name": "Richard Samier",
+      "jobTitle": "Psychologue",
+      "url": "https://www.richardsamier.com/",
+      "identifier": "RPPS 10109835404"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Richard Samier",
+      "jobTitle": "Psychologue",
+      "url": "https://www.richardsamier.com/",
+      "identifier": "RPPS 10109835404"
+    }
+  }
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -669,6 +695,119 @@
     .texte-lien:hover { border-color: var(--green); }
     .contact-value + .contact-value { margin-top: 0.5rem; }
 
+    /* ── SOUS-MENUS ── */
+    .nav-drop { position: relative; }
+    .nav-drop-btn {
+      font-family: inherit;
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--text-mid);
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: color 0.2s;
+    }
+    .nav-drop-btn:hover, .nav-drop-btn.actif { color: var(--green); }
+    .nav-drop-btn.actif { font-weight: 500; }
+    .nav-drop-btn::after {
+      content: "";
+      width: 0.36rem;
+      height: 0.36rem;
+      border-right: 1.5px solid currentColor;
+      border-bottom: 1.5px solid currentColor;
+      transform: translateY(-2px) rotate(45deg);
+    }
+    .nav-sub {
+      display: none;
+      position: absolute;
+      top: calc(100% + 14px);
+      left: -0.9rem;
+      min-width: 230px;
+      list-style: none;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.09);
+      padding: 0.4rem;
+    }
+    .nav-sub::before { content: ""; position: absolute; left: 0; right: 0; top: -16px; height: 16px; }
+    .nav-drop:hover .nav-sub, .nav-drop:focus-within .nav-sub, .nav-drop.open .nav-sub { display: block; }
+    .nav-links .nav-sub a { display: block; padding: 0.55rem 0.8rem; border-radius: 6px; font-size: 0.88rem; }
+    .nav-links .nav-sub a:hover { background: var(--green-light); }
+    @media (max-width: 1000px) {
+      .nav-drop-btn { font-size: 0.8rem; }
+    }
+    @media (max-width: 880px) {
+      .nav-links { max-height: calc(100vh - 62px); overflow-y: auto; }
+      .nav-drop-btn {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 0.85rem 0 0.3rem;
+        font-size: 0.95rem;
+        color: var(--text-mid);
+        cursor: default;
+      }
+      .nav-drop-btn::after { display: none; }
+      .nav-sub {
+        display: block;
+        position: static;
+        min-width: 0;
+        border: none;
+        box-shadow: none;
+        background: transparent;
+        padding: 0 0 0.5rem 1rem;
+      }
+      .nav-sub::before { display: none; }
+      .nav-links .nav-sub li { border-bottom: none; }
+      .nav-links .nav-sub li > a { padding: 0.45rem 0; font-size: 0.92rem; }
+      .nav-links .nav-sub a:hover { background: transparent; }
+    }
+
+    /* ── EN-TÊTE DES PAGES INTÉRIEURES ── */
+    .page-head { position: relative; overflow: hidden; background: var(--green); padding: 3.2rem 2rem 3.2rem; }
+    .page-head::before, .page-head::after { content: ""; position: absolute; border-radius: 50%; pointer-events: none; }
+    .page-head::before { width: 460px; height: 460px; right: -120px; top: -270px; background: rgba(0,0,0,0.09); }
+    .page-head::after { width: 260px; height: 260px; right: 70px; bottom: -200px; background: rgba(255,255,255,0.07); }
+    .page-head .container { position: relative; z-index: 1; }
+    .page-head .fil { color: rgba(255,255,255,0.65); margin-bottom: 1.6rem; }
+    .page-head .fil a { color: rgba(255,255,255,0.85); border-bottom-color: rgba(255,255,255,0.3); }
+    .page-head .fil a:hover { color: var(--white); border-color: var(--white); }
+    .page-head .hero-eyebrow { color: rgba(255,255,255,0.72); margin-bottom: 0.9rem; }
+    .page-head h1 { color: var(--white); font-size: clamp(1.8rem, 3.6vw, 2.5rem); margin-bottom: 1.1rem; max-width: 760px; }
+    .page-head .page-lead { color: rgba(255,255,255,0.88); font-size: 1.02rem; max-width: 680px; margin-bottom: 0; }
+    .page-head .page-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 1.2rem; margin-top: 1.8rem; }
+    .page-head .lien-clair {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.9rem;
+      border-bottom: 1px solid rgba(255,255,255,0.4);
+      padding-bottom: 1px;
+    }
+    .page-head .lien-clair:hover { border-color: var(--white); }
+    h1 .hero-eyebrow { display: block; font-family: 'Inter', sans-serif; line-height: 1.7; }
+    .auteur { font-size: 0.82rem; color: var(--text-light); margin-bottom: 1.6rem; }
+    .references { list-style: none; padding: 0; }
+    .references li { font-size: 0.88rem; color: var(--text-mid); padding: 0.35rem 0 0.35rem 1.2rem; text-indent: -1.2rem; }
+    .references em { font-style: italic; }
+    .lieux-grid.trois { grid-template-columns: repeat(3, 1fr); scroll-margin-top: 90px; }
+    .lieux-grid.trois .lieu-card { padding: 1.5rem 1.4rem; }
+    @media (max-width: 860px) {
+      .lieux-grid.trois { grid-template-columns: 1fr; }
+    }
+    .autres-jours { font-size: 0.97rem; }
+    .autres-jours strong { font-weight: 500; color: var(--text); }
+    @media (max-width: 640px) {
+      .page-head { padding: 2.4rem 1.5rem 2.6rem; }
+      .page-head::before { width: 300px; height: 300px; right: -140px; top: -180px; }
+      .page-head::after { display: none; }
+    }
+
     /* ── PAGES DE CONTENU ── */
     .tarifs-grid.une { grid-template-columns: minmax(0, 440px); }
     .liste { list-style: none; padding: 0; margin: 0 0 1.2rem; }
@@ -884,12 +1023,26 @@
     <div class="nav-inner">
       <a class="nav-name" href="/">Richard Samier</a>
       <ul class="nav-links" id="nav-links">
-        <li><a href="/">Accueil</a></li>
-        <li><a href="/burn-out-psychologue-lyon" class="actif" aria-current="page">Burn-out</a></li>
-        <li><a href="/therapie-tcc-lyon">TCC</a></li>
-        <li><a href="/psychologue-lyon-6">Cabinet Lyon 6</a></li>
-        <li><a href="/psychologue-lyon-9">Cabinet Lyon 9</a></li>
+        <li><a href="/#about">Qui suis-je</a></li>
+        <li class="nav-drop">
+          <button type="button" class="nav-drop-btn" aria-haspopup="true" aria-expanded="false">Cabinets</button>
+          <ul class="nav-sub">
+            <li><a href="/#cabinet">Jours et horaires</a></li>
+            <li><a href="/psychologue-lyon-6">Lyon 6 — rue Vauban</a></li>
+            <li><a href="/psychologue-lyon-9">Lyon 9 — TSA3</a></li>
+          </ul>
+        </li>
+        <li class="nav-drop">
+          <button type="button" class="nav-drop-btn actif" aria-haspopup="true" aria-expanded="false">Spécialités</button>
+          <ul class="nav-sub">
+            <li><a href="/#specialites">Ce que j'accompagne</a></li>
+            <li><a href="/burn-out-psychologue-lyon" class="actif" aria-current="page">Burn-out</a></li>
+            <li><a href="/therapie-tcc-lyon">Thérapie TCC</a></li>
+          </ul>
+        </li>
+        <li><a href="/#approche">Comment je travaille</a></li>
         <li><a href="/#tarifs">Tarifs</a></li>
+        <li><a href="/#faq">FAQ</a></li>
         <li class="nav-cta-item"><a href="/#modalites" class="nav-cta">Prendre RDV</a></li>
       </ul>
       <div class="nav-mobile">
@@ -899,29 +1052,22 @@
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-inner">
-      <div>
-        <p class="fil"><a href="/">Accueil</a> › Burn-out</p>
-        <p class="hero-eyebrow">Burn-out · Épuisement professionnel</p>
-        <h1>Burn-out : se faire accompagner par un psychologue à Lyon</h1>
-        <p class="hero-lead">Le burn-out ne tombe pas d'un coup. Il s'installe, souvent chez des personnes engagées, qui ont tenu longtemps. Je vous aide à comprendre ce qui s'est passé, à récupérer, et à retrouver un rapport au travail qui vous convient.</p>
-        <div class="hero-actions">
-          <a href="/#modalites" class="btn-primary">Prendre rendez-vous</a>
-          <a href="#signes" class="btn-ghost">Lire la suite ↓</a>
-        </div>
-      </div>
-      <div class="hero-photo-wrap">
-        <img src="/photo-profil.jpg" alt="Richard Samier, psychologue à Lyon" width="180" height="180" />
+  <!-- EN-TÊTE -->
+  <header class="page-head">
+    <div class="container">
+      <p class="fil"><a href="/">Accueil</a> › Spécialités › Burn-out</p>
+      <p class="hero-eyebrow">Burn-out · Épuisement professionnel</p>
+      <h1>Burn-out : se faire accompagner par un psychologue à Lyon</h1>
+      <p class="page-lead">Le burn-out ne tombe pas d'un coup, il s'installe.</p>
+      <div class="page-actions">
+        <a href="/#modalites" class="btn-white">Prendre rendez-vous</a>
       </div>
     </div>
-  </section>
-
-  <hr class="divider" />
+  </header>
 
   <section id="signes" style="background: var(--bg);">
     <div class="container fade-in">
+      <p class="auteur">Par Richard Samier, psychologue (RPPS n° 10109835404) · Mis à jour le 10 octobre 2026</p>
       <h2>Comment ça s'installe</h2>
       <p>On parle de burn-out, ou d'épuisement professionnel, quand le travail a fini par vider les réserves. On le reconnaît généralement à trois signes :</p>
       <ul class="liste">
@@ -965,7 +1111,6 @@
         <li><strong>Poser des limites.</strong> Dire non, déléguer, se déconnecter : on s'y entraîne concrètement, situation par situation.</li>
         <li><strong>Préparer la suite.</strong> Reprise, changement de poste ou de cap : on clarifie ce qui compte pour vous et on repère les signaux d'alerte pour la suite.</li>
       </ul>
-      <p>J'ai moi-même passé six ans dans des start-ups avant d'exercer. Je connais de l'intérieur ces environnements où l'on en fait toujours un peu plus.</p>
     </div>
   </section>
 
@@ -982,7 +1127,7 @@
   <hr class="divider" />
 
   <!-- CTA -->
-  <div class="cta-mid fade-in">
+  <div class="cta-mid fade-in" style="margin-top: 3.5rem; margin-bottom: 3.5rem;">
     <h2>Prendre rendez-vous</h2>
     <p>La première séance dure 45 minutes et n'engage à rien au-delà de ce premier rendez-vous.</p>
     <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
@@ -1022,26 +1167,18 @@
 
   <hr class="divider" />
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container fade-in">
-      <h2>Contact</h2>
-      <div class="contact-grid">
-        <div class="contact-item">
-          <span class="contact-label">Téléphone</span>
-          <a href="tel:+33609520666" class="contact-value">06 09 52 06 66</a>
-        </div>
-        <div class="contact-item">
-          <span class="contact-label">Email</span>
-          <a href="mailto:richardsamier.psy@gmail.com" class="contact-value">richardsamier.psy@gmail.com</a>
-        </div>
-        <div class="contact-item">
-          <span class="contact-label">Cabinets</span>
-          <a href="/psychologue-lyon-6" class="contact-value">Lyon 6 · 116 rue Vauban, 69006 Lyon</a>
-          <a href="/psychologue-lyon-9" class="contact-value">Lyon 9 · TSA3, 24 avenue Joannès Masset, 69009 Lyon</a>
-        </div>
-      </div>
-      <p class="rpps-note">Richard Samier · Psychologue · RPPS n° 10109835404 · Université Paris 8 · Thérapies Cognitivo-Comportementales (TCC)</p>
+  <section id="references" style="background: var(--white); padding: 3rem 2rem;">
+    <div class="container">
+      <h2 style="font-size: 1.15rem; margin-bottom: 0.8rem;">Références</h2>
+      <ul class="references">
+        <li>Beck, A. T., Rush, A. J., Shaw, B. F. et Emery, G. (1979). <em>Cognitive Therapy of Depression</em>. Guilford Press.</li>
+        <li>Demerouti, E., Bakker, A. B., Nachreiner, F. et Schaufeli, W. B. (2001). The job demands-resources model of burnout. <em>Journal of Applied Psychology</em>, 86(3), 499-512.</li>
+        <li>Freudenberger, H. J. (1974). Staff burn-out. <em>Journal of Social Issues</em>, 30(1), 159-165.</li>
+        <li>Haute Autorité de Santé (2017, mise à jour 2025). <a href="https://www.has-sante.fr/jcms/c_2769318/fr/reperage-et-prise-en-charge-cliniques-du-syndrome-d-epuisement-professionnel-ou-burnout" class="texte-lien" target="_blank" rel="noopener">Repérage et prise en charge cliniques du syndrome d'épuisement professionnel ou burnout</a>. Fiche mémo.</li>
+        <li>Maslach, C. et Jackson, S. E. (1981). The measurement of experienced burnout. <em>Journal of Occupational Behaviour</em>, 2(2), 99-113.</li>
+        <li>Organisation mondiale de la santé (2019). <a href="https://www.who.int/fr/news/item/28-05-2019-burn-out-an-occupational-phenomenon-international-classification-of-diseases" class="texte-lien" target="_blank" rel="noopener">Le burn-out, un « phénomène lié au travail » : Classification internationale des maladies (CIM-11)</a>.</li>
+        <li>Rothlin, P. et Werder, P. R. (2007). <em>Diagnose Boreout</em>. Redline Wirtschaft.</li>
+      </ul>
     </div>
   </section>
 
@@ -1049,7 +1186,8 @@
   <!-- FOOTER -->
   <footer>
     <p><a href="/psychologue-lyon-6">Psychologue Lyon 6</a> · <a href="/psychologue-lyon-9">Psychologue Lyon 9</a> · <a href="/burn-out-psychologue-lyon">Burn-out</a> · <a href="/therapie-tcc-lyon">TCC</a> · <a href="/mentions-legales">Mentions légales</a></p>
-    <p>© 2026 Richard Samier — Psychologue TCC · <a href="mailto:richardsamier.psy@gmail.com">richardsamier.psy@gmail.com</a></p>
+    <p><a href="tel:+33609520666">06 09 52 06 66</a> · <a href="mailto:richardsamier.psy@gmail.com">richardsamier.psy@gmail.com</a></p>
+    <p>© 2026 Richard Samier — Psychologue TCC · RPPS n° 10109835404</p>
   </footer>
 
   <!-- STICKY MOBILE CTA -->
@@ -1076,6 +1214,24 @@
       navLinks.addEventListener('click', (e) => { if (e.target.closest('a')) setOpen(false); });
       document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
     }
+
+    // Sous-menus
+    const closeDrops = () => document.querySelectorAll('.nav-drop.open').forEach((el) => {
+      el.classList.remove('open');
+      el.querySelector('.nav-drop-btn').setAttribute('aria-expanded', 'false');
+    });
+    document.querySelectorAll('.nav-drop-btn').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        const item = btn.parentElement;
+        const open = !item.classList.contains('open');
+        closeDrops();
+        item.classList.toggle('open', open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        e.stopPropagation();
+      });
+    });
+    document.addEventListener('click', closeDrops);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDrops(); });
   </script>
 
 </body>

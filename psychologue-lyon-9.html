@@ -4,17 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Psychologue à Lyon 9 — TSA3, Gorge de Loup | Richard Samier</title>
-  <meta name="description" content="Consultations de psychologie à Lyon 9 le jeudi, au sein du cabinet TSA3 (Gorge de Loup). TCC pour adultes : burnout, anxiété, épuisement professionnel. Accès, tarifs, rendez-vous." />
+  <meta name="description" content="Psychologue à Lyon 9, le jeudi au centre TSA3 (Gorge de Loup). TCC pour adultes : burnout, anxiété, épuisement. Accès, tarifs et rendez-vous." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.richardsamier.com/psychologue-lyon-9" />
   <link rel="alternate" hreflang="fr" href="https://www.richardsamier.com/psychologue-lyon-9" />
   <link rel="alternate" hreflang="en" href="https://www.richardsamier.com/en/psychologist-lyon-9" />
+  <link rel="alternate" hreflang="x-default" href="https://www.richardsamier.com/psychologue-lyon-9" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="shortcut icon" href="/favicon.svg" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Psychologue à Lyon 9 — TSA3, Gorge de Loup" />
-  <meta property="og:description" content="Consultations de psychologie à Lyon 9 le jeudi, au sein du cabinet TSA3 (Gorge de Loup). TCC pour adultes : burnout, anxiété, épuisement professionnel. Accès, tarifs, rendez-vous." />
+  <meta property="og:description" content="Psychologue à Lyon 9, le jeudi au centre TSA3 (Gorge de Loup). TCC pour adultes : burnout, anxiété, épuisement. Accès, tarifs et rendez-vous." />
   <meta property="og:url" content="https://www.richardsamier.com/psychologue-lyon-9" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="fr_FR" />
@@ -23,7 +24,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Psychologue à Lyon 9 — TSA3, Gorge de Loup" />
-  <meta name="twitter:description" content="Consultations de psychologie à Lyon 9 le jeudi, au sein du cabinet TSA3 (Gorge de Loup). TCC pour adultes : burnout, anxiété, épuisement professionnel. Accès, tarifs, rendez-vous." />
+  <meta name="twitter:description" content="Psychologue à Lyon 9, le jeudi au centre TSA3 (Gorge de Loup). TCC pour adultes : burnout, anxiété, épuisement. Accès, tarifs et rendez-vous." />
   <meta name="twitter:image" content="https://www.richardsamier.com/og-image.jpg" />
 
   <!-- Schema.org -->
@@ -699,6 +700,119 @@
     .texte-lien:hover { border-color: var(--green); }
     .contact-value + .contact-value { margin-top: 0.5rem; }
 
+    /* ── SOUS-MENUS ── */
+    .nav-drop { position: relative; }
+    .nav-drop-btn {
+      font-family: inherit;
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--text-mid);
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: color 0.2s;
+    }
+    .nav-drop-btn:hover, .nav-drop-btn.actif { color: var(--green); }
+    .nav-drop-btn.actif { font-weight: 500; }
+    .nav-drop-btn::after {
+      content: "";
+      width: 0.36rem;
+      height: 0.36rem;
+      border-right: 1.5px solid currentColor;
+      border-bottom: 1.5px solid currentColor;
+      transform: translateY(-2px) rotate(45deg);
+    }
+    .nav-sub {
+      display: none;
+      position: absolute;
+      top: calc(100% + 14px);
+      left: -0.9rem;
+      min-width: 230px;
+      list-style: none;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.09);
+      padding: 0.4rem;
+    }
+    .nav-sub::before { content: ""; position: absolute; left: 0; right: 0; top: -16px; height: 16px; }
+    .nav-drop:hover .nav-sub, .nav-drop:focus-within .nav-sub, .nav-drop.open .nav-sub { display: block; }
+    .nav-links .nav-sub a { display: block; padding: 0.55rem 0.8rem; border-radius: 6px; font-size: 0.88rem; }
+    .nav-links .nav-sub a:hover { background: var(--green-light); }
+    @media (max-width: 1000px) {
+      .nav-drop-btn { font-size: 0.8rem; }
+    }
+    @media (max-width: 880px) {
+      .nav-links { max-height: calc(100vh - 62px); overflow-y: auto; }
+      .nav-drop-btn {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 0.85rem 0 0.3rem;
+        font-size: 0.95rem;
+        color: var(--text-mid);
+        cursor: default;
+      }
+      .nav-drop-btn::after { display: none; }
+      .nav-sub {
+        display: block;
+        position: static;
+        min-width: 0;
+        border: none;
+        box-shadow: none;
+        background: transparent;
+        padding: 0 0 0.5rem 1rem;
+      }
+      .nav-sub::before { display: none; }
+      .nav-links .nav-sub li { border-bottom: none; }
+      .nav-links .nav-sub li > a { padding: 0.45rem 0; font-size: 0.92rem; }
+      .nav-links .nav-sub a:hover { background: transparent; }
+    }
+
+    /* ── EN-TÊTE DES PAGES INTÉRIEURES ── */
+    .page-head { position: relative; overflow: hidden; background: var(--green); padding: 3.2rem 2rem 3.2rem; }
+    .page-head::before, .page-head::after { content: ""; position: absolute; border-radius: 50%; pointer-events: none; }
+    .page-head::before { width: 460px; height: 460px; right: -120px; top: -270px; background: rgba(0,0,0,0.09); }
+    .page-head::after { width: 260px; height: 260px; right: 70px; bottom: -200px; background: rgba(255,255,255,0.07); }
+    .page-head .container { position: relative; z-index: 1; }
+    .page-head .fil { color: rgba(255,255,255,0.65); margin-bottom: 1.6rem; }
+    .page-head .fil a { color: rgba(255,255,255,0.85); border-bottom-color: rgba(255,255,255,0.3); }
+    .page-head .fil a:hover { color: var(--white); border-color: var(--white); }
+    .page-head .hero-eyebrow { color: rgba(255,255,255,0.72); margin-bottom: 0.9rem; }
+    .page-head h1 { color: var(--white); font-size: clamp(1.8rem, 3.6vw, 2.5rem); margin-bottom: 1.1rem; max-width: 760px; }
+    .page-head .page-lead { color: rgba(255,255,255,0.88); font-size: 1.02rem; max-width: 680px; margin-bottom: 0; }
+    .page-head .page-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 1.2rem; margin-top: 1.8rem; }
+    .page-head .lien-clair {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.9rem;
+      border-bottom: 1px solid rgba(255,255,255,0.4);
+      padding-bottom: 1px;
+    }
+    .page-head .lien-clair:hover { border-color: var(--white); }
+    h1 .hero-eyebrow { display: block; font-family: 'Inter', sans-serif; line-height: 1.7; }
+    .auteur { font-size: 0.82rem; color: var(--text-light); margin-bottom: 1.6rem; }
+    .references { list-style: none; padding: 0; }
+    .references li { font-size: 0.88rem; color: var(--text-mid); padding: 0.35rem 0 0.35rem 1.2rem; text-indent: -1.2rem; }
+    .references em { font-style: italic; }
+    .lieux-grid.trois { grid-template-columns: repeat(3, 1fr); scroll-margin-top: 90px; }
+    .lieux-grid.trois .lieu-card { padding: 1.5rem 1.4rem; }
+    @media (max-width: 860px) {
+      .lieux-grid.trois { grid-template-columns: 1fr; }
+    }
+    .autres-jours { font-size: 0.97rem; }
+    .autres-jours strong { font-weight: 500; color: var(--text); }
+    @media (max-width: 640px) {
+      .page-head { padding: 2.4rem 1.5rem 2.6rem; }
+      .page-head::before { width: 300px; height: 300px; right: -140px; top: -180px; }
+      .page-head::after { display: none; }
+    }
+
     /* ── PAGES DE CONTENU ── */
     .tarifs-grid.une { grid-template-columns: minmax(0, 440px); }
     .liste { list-style: none; padding: 0; margin: 0 0 1.2rem; }
@@ -914,9 +1028,24 @@
     <div class="nav-inner">
       <a class="nav-name" href="/">Richard Samier</a>
       <ul class="nav-links" id="nav-links">
-        <li><a href="/">Accueil</a></li>
-        <li><a href="/psychologue-lyon-6">Cabinet Lyon 6</a></li>
-        <li><a href="/psychologue-lyon-9" class="actif" aria-current="page">Cabinet Lyon 9</a></li>
+        <li><a href="/#about">Qui suis-je</a></li>
+        <li class="nav-drop">
+          <button type="button" class="nav-drop-btn actif" aria-haspopup="true" aria-expanded="false">Cabinets</button>
+          <ul class="nav-sub">
+            <li><a href="/#cabinet">Jours et horaires</a></li>
+            <li><a href="/psychologue-lyon-6">Lyon 6 — rue Vauban</a></li>
+            <li><a href="/psychologue-lyon-9" class="actif" aria-current="page">Lyon 9 — TSA3</a></li>
+          </ul>
+        </li>
+        <li class="nav-drop">
+          <button type="button" class="nav-drop-btn" aria-haspopup="true" aria-expanded="false">Spécialités</button>
+          <ul class="nav-sub">
+            <li><a href="/#specialites">Ce que j'accompagne</a></li>
+            <li><a href="/burn-out-psychologue-lyon">Burn-out</a></li>
+            <li><a href="/therapie-tcc-lyon">Thérapie TCC</a></li>
+          </ul>
+        </li>
+        <li><a href="/#approche">Comment je travaille</a></li>
         <li><a href="/#tarifs">Tarifs</a></li>
         <li><a href="/#faq">FAQ</a></li>
         <li class="nav-lang"><a href="/psychologue-lyon-9" class="active">FR</a> · <a href="/en/psychologist-lyon-9">EN</a></li>
@@ -929,31 +1058,23 @@
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-inner">
-      <div>
-        <p class="fil"><a href="/">Accueil</a> › Psychologue à Lyon 9</p>
-        <p class="hero-eyebrow">Cabinet de Lyon 9 · Le jeudi</p>
-        <h1>Psychologue à Lyon 9 — TSA3, Gorge de Loup</h1>
-        <p class="hero-lead">Je vous reçois le jeudi au sein de TSA3, à Gorge de Loup, dans le 9e arrondissement de Lyon. J'y propose les mêmes consultations qu'à Lyon 6, ouvertes à tous les adultes : un accompagnement individuel en Thérapies Cognitivo-Comportementales (TCC).</p>
-        <div class="hero-actions">
-          <a href="https://www.doctolib.fr/psychologue/lyon/richard-samier/booking/motives?specialityId=14&amp;telehealth=false&amp;placeId=practice-847740&amp;source=external_referral" class="btn-primary" target="_blank" rel="noopener">Réserver sur Doctolib →</a>
-          <a href="#infos" class="btn-ghost">Informations pratiques ↓</a>
-        </div>
-      </div>
-      <div class="hero-photo-wrap">
-        <img src="/photo-profil.jpg" alt="Richard Samier, psychologue à Lyon 9" width="180" height="180" />
+  <!-- EN-TÊTE -->
+  <header class="page-head">
+    <div class="container">
+      <p class="fil"><a href="/">Accueil</a> › Cabinets › Lyon 9</p>
+      <h1><span class="hero-eyebrow">Psychologue · Consultations le jeudi</span>Lyon 9 — Le centre TSA3</h1>
+      <p class="page-lead">Je vous reçois le jeudi au sein de TSA3, à Gorge de Loup, dans le 9e arrondissement de Lyon. J'y propose les mêmes consultations qu'à Lyon 6, ouvertes à tous les adultes : un accompagnement individuel en Thérapies Cognitivo-Comportementales (TCC).</p>
+      <div class="page-actions">
+        <a href="https://www.doctolib.fr/psychologue/lyon/richard-samier/booking/motives?specialityId=14&amp;telehealth=false&amp;placeId=practice-847740&amp;source=external_referral" class="btn-white" target="_blank" rel="noopener">Réserver sur Doctolib →</a>
+        <a href="#infos" class="lien-clair">Informations pratiques ↓</a>
       </div>
     </div>
-  </section>
-
-  <hr class="divider" />
+  </header>
 
   <!-- LE CABINET -->
   <section id="cabinet">
     <div class="container fade-in">
-      <h2>Le cabinet TSA3</h2>
+      <h2>Le lieu</h2>
       <p>TSA3 est un cabinet interdisciplinaire installé au Centre d'activité Gorge de Loup : plusieurs professionnels y exercent sous le même toit. J'y consulte le jeudi, au rez-de-chaussée du bâtiment 5.</p>
       <p>Mes consultations y sont ouvertes à tous les adultes, comme à Lyon 6. Seul l'accompagnement à l'<a href="#insertion" class="texte-lien">insertion professionnelle</a>, présenté plus bas, est réservé aux personnes ayant reçu un diagnostic de TSA ou de TDAH.</p>
       <p>Il n'y a pas d'accueil ni de secrétariat sur place : la prise de rendez-vous se fait en ligne, sur <a href="https://www.doctolib.fr/psychologue/lyon/richard-samier/booking/motives?specialityId=14&amp;telehealth=false&amp;placeId=practice-847740&amp;source=external_referral" class="texte-lien" target="_blank" rel="noopener">Doctolib</a>.</p>
@@ -1015,29 +1136,8 @@
 
   <hr class="divider" />
 
-  <!-- ACCOMPAGNEMENT -->
-  <section id="specialites">
-    <div class="container fade-in">
-      <h2>Ce que j'accompagne</h2>
-      <p>J'accompagne principalement des adultes sur des problématiques liées au travail et à la vie personnelle : un épuisement qui s'installe, une anxiété qui tourne en boucle, un sentiment de ne plus trouver sa place, une difficulté à poser des limites. Pas forcément une crise. Juste quelque chose qui pèse.</p>
-      <p>Mon cadre de référence, ce sont les Thérapies Cognitivo-Comportementales (TCC) — des thérapies validées scientifiquement, qui travaillent sur le lien entre ce qu'on pense, ce qu'on ressent et ce qu'on fait.</p>
-      <div class="tags">
-        <span class="tag">Burn-out</span>
-        <span class="tag">Bored-out</span>
-        <span class="tag">Anxiété</span>
-        <span class="tag">Stress</span>
-        <span class="tag">Sens au travail</span>
-        <span class="tag">Charge mentale</span>
-        <span class="tag">Confiance en soi</span>
-        <span class="tag">Régulation des émotions</span>
-        <span class="tag">Équilibre pro-perso</span>
-      </div>
-      <p style="margin-top: 1.6rem;"><a href="/#approche" class="texte-lien">Comment je travaille</a> · <a href="/#premiere" class="texte-lien">Comment se passe la première séance</a></p>
-    </div>
-  </section>
-
   <!-- CTA -->
-  <div class="cta-mid fade-in">
+  <div class="cta-mid fade-in" style="margin-top: 3.5rem; margin-bottom: 3.5rem;">
     <h2>Réserver une séance à Lyon 9</h2>
     <p>La première séance dure 45 minutes et n'engage à rien au-delà de ce premier rendez-vous.</p>
     <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
@@ -1047,27 +1147,10 @@
 
   <hr class="divider" />
 
-  <!-- AUTRES POSSIBILITÉS -->
-  <section id="modalites">
-    <div class="container fade-in">
-      <h2>Un autre jour vous arrange mieux ?</h2>
-      <div class="modalites-grid deux">
-        <div class="modalite-card">
-          <p style="font-size:2rem; margin-bottom:0.6rem;">🏢</p>
-          <h3>Cabinet de Lyon 6</h3>
-          <p class="modalite-sub">Le mercredi · 9h15 – 20h</p>
-          <p class="modalite-adresse">116 rue Vauban, 69006 Lyon</p>
-          <a href="https://www.doctolib.fr/psychologue/lyon/richard-samier/booking/motives?specialityId=14&amp;telehealth=false&amp;placeId=practice-808634&amp;source=external_referral" class="btn-white-outline" target="_blank" rel="noopener">Réserver sur Doctolib →</a>
-          <a href="/psychologue-lyon-6" class="lien-plus">En savoir plus sur le cabinet</a>
-        </div>
-        <div class="modalite-card">
-          <p style="font-size:2rem; margin-bottom:0.6rem;">💻</p>
-          <h3>Séance en visio</h3>
-          <p class="modalite-sub">Lundi 14h – 17h · mardi et vendredi 9h – 17h</p>
-          <p class="modalite-adresse">Via Google Meet · Partout en France</p>
-          <a href="https://calendly.com/richardsamier-psy/1to1" class="btn-white-outline" target="_blank" rel="noopener">Réserver →</a>
-        </div>
-      </div>
+  <!-- AUTRES JOURS -->
+  <section id="autres" style="padding: 2.6rem 2rem; background: var(--white);">
+    <div class="container">
+      <p class="autres-jours"><strong>Un autre jour vous arrange mieux ?</strong> Je consulte aussi le mercredi à <a href="/psychologue-lyon-6" class="texte-lien">Lyon 6</a> (9h15 – 20h) et en visio le lundi, le mardi et le vendredi. <a href="/#modalites" class="texte-lien">Voir toutes les possibilités</a></p>
     </div>
   </section>
 
@@ -1101,32 +1184,11 @@
 
   <hr class="divider" />
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container fade-in">
-      <h2>Contact</h2>
-      <div class="contact-grid">
-        <div class="contact-item">
-          <span class="contact-label">Téléphone</span>
-          <a href="tel:+33609520666" class="contact-value">06 09 52 06 66</a>
-        </div>
-        <div class="contact-item">
-          <span class="contact-label">Email</span>
-          <a href="mailto:richardsamier.psy@gmail.com" class="contact-value">richardsamier.psy@gmail.com</a>
-        </div>
-        <div class="contact-item">
-          <span class="contact-label">Adresse</span>
-          <span class="contact-value">TSA3 · 24 avenue Joannès Masset, Bât. 5 (RDC), 69009 Lyon</span>
-        </div>
-      </div>
-      <p class="rpps-note">Richard Samier · Psychologue · RPPS n° 10109835404 · Université Paris 8 · Thérapies Cognitivo-Comportementales (TCC)</p>
-    </div>
-  </section>
-
   <!-- FOOTER -->
   <footer>
     <p><a href="/psychologue-lyon-6">Psychologue Lyon 6</a> · <a href="/psychologue-lyon-9">Psychologue Lyon 9</a> · <a href="/burn-out-psychologue-lyon">Burn-out</a> · <a href="/therapie-tcc-lyon">TCC</a> · <a href="/mentions-legales">Mentions légales</a></p>
-    <p>© 2026 Richard Samier — Psychologue TCC · <a href="mailto:richardsamier.psy@gmail.com">richardsamier.psy@gmail.com</a></p>
+    <p><a href="tel:+33609520666">06 09 52 06 66</a> · <a href="mailto:richardsamier.psy@gmail.com">richardsamier.psy@gmail.com</a></p>
+    <p>© 2026 Richard Samier — Psychologue TCC · RPPS n° 10109835404</p>
   </footer>
 
   <!-- STICKY MOBILE CTA -->
@@ -1153,6 +1215,24 @@
       navLinks.addEventListener('click', (e) => { if (e.target.closest('a')) setOpen(false); });
       document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
     }
+
+    // Sous-menus
+    const closeDrops = () => document.querySelectorAll('.nav-drop.open').forEach((el) => {
+      el.classList.remove('open');
+      el.querySelector('.nav-drop-btn').setAttribute('aria-expanded', 'false');
+    });
+    document.querySelectorAll('.nav-drop-btn').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        const item = btn.parentElement;
+        const open = !item.classList.contains('open');
+        closeDrops();
+        item.classList.toggle('open', open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        e.stopPropagation();
+      });
+    });
+    document.addEventListener('click', closeDrops);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDrops(); });
   </script>
 
 </body>
