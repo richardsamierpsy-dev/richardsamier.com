@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mentions légales et confidentialité | Richard Samier, psychologue à Lyon</title>
+  <meta name="description" content="Mentions légales du site richardsamier.com : éditeur, hébergeur, propriété intellectuelle et données personnelles." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://www.richardsamier.com/mentions-legales" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mentions légales — Richard Samier" />
+  <meta property="og:description" content="Mentions légales du site richardsamier.com : éditeur, hébergeur, propriété intellectuelle et données personnelles." />
+  <meta property="og:url" content="https://www.richardsamier.com/mentions-legales" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:image" content="https://www.richardsamier.com/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mentions légales — Richard Samier" />
+  <meta name="twitter:description" content="Mentions légales du site richardsamier.com : éditeur, hébergeur, propriété intellectuelle et données personnelles." />
+  <meta name="twitter:image" content="https://www.richardsamier.com/og-image.jpg" />
+
+
+  <link rel="preload" href="/fonts/inter-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/lora-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />
+
+  <style>
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url('/fonts/inter-latin-300-normal.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('/fonts/inter-latin-400-normal.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url('/fonts/inter-latin-500-normal.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Lora';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('/fonts/lora-latin-400-normal.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Lora';
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url('/fonts/lora-latin-600-normal.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Lora';
+      font-style: italic;
+      font-weight: 400;
+      font-display: swap;
+      src: url('/fonts/lora-latin-400-italic.woff2') format('woff2');
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green: #0F7B6C;
+      --green-dark: #0a6358;
+      --green-light: #e8f5f3;
+      --green-mid: #c2e4df;
+      --text: #1a1a1a;
+      --text-mid: #4a4a4a;
+      --text-light: #767676;
+      --bg: #fafaf8;
+      --white: #ffffff;
+      --border: #e5e5e0;
+      --radius: 12px;
+      --shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250,250,248,0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+    }
+    .nav-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 62px;
+    }
+    .nav-name {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--green);
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      align-items: center;
+    }
+    .nav-name, .nav-links a, .nav-lang { white-space: nowrap; }
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--text-mid);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--green); }
+    .nav-cta {
+      background: var(--green);
+      color: var(--white) !important;
+      padding: 0.45rem 1rem;
+      border-radius: 6px;
+      font-weight: 500 !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--green-dark) !important; color: var(--white) !important; }
+    .nav-lang {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-right: 0.4rem;
+    }
+    .nav-lang a {
+      color: var(--text-light);
+      text-decoration: none;
+      padding: 0.2rem 0.4rem;
+      border-radius: 6px;
+    }
+    .nav-lang a.active {
+      color: var(--green);
+      font-weight: 500;
+    }
+    .nav-lang a:hover { color: var(--green); }
+
+    .nav-links a.actif { color: var(--green); font-weight: 500; }
+    .nav-mobile { display: none; align-items: center; gap: 0.7rem; }
+    .nav-mobile .nav-cta { text-decoration: none; font-size: 0.85rem; white-space: nowrap; }
+    .nav-toggle {
+      width: 40px;
+      height: 38px;
+      padding: 0;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--white);
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      cursor: pointer;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      border-radius: 2px;
+      background: var(--text-mid);
+      transition: transform 0.2s, opacity 0.2s;
+    }
+    .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+    /* ── LAYOUT ── */
+    section { padding: 5rem 2rem; }
+    .container { max-width: 900px; margin: 0 auto; }
+
+    /* ── HERO ── */
+    #hero {
+      padding: 6rem 2rem 5rem;
+      background: var(--white);
+    }
+    .hero-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 180px;
+      gap: 3rem;
+      align-items: center;
+    }
+    .hero-eyebrow {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 1.2rem;
+    }
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(2rem, 4vw, 2.9rem);
+      font-weight: 600;
+      line-height: 1.22;
+      color: var(--text);
+      margin-bottom: 1.4rem;
+    }
+    .hero-lead {
+      font-size: 1.05rem;
+      color: var(--text-mid);
+      max-width: 560px;
+      margin-bottom: 2rem;
+    }
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .badge {
+      font-size: 0.78rem;
+      font-weight: 400;
+      padding: 0.28rem 0.7rem;
+      border-radius: 100px;
+      background: var(--green-light);
+      color: var(--green);
+      border: 1px solid var(--green-mid);
+    }
+    .hero-actions { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-block;
+      background: var(--green);
+      color: var(--white);
+      text-decoration: none;
+      padding: 0.85rem 1.8rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 2px 8px rgba(15,123,108,0.25);
+    }
+    .btn-primary:hover { background: var(--green-dark); transform: translateY(-1px); }
+    .btn-primary-outline {
+      background: transparent;
+      border: 2px solid var(--green);
+      color: var(--green) !important;
+      box-shadow: none;
+    }
+    .btn-primary-outline:hover { background: var(--green-light); }
+    .btn-ghost {
+      color: var(--green);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 400;
+      border-bottom: 1px solid var(--green-mid);
+      transition: border-color 0.2s;
+      padding-bottom: 1px;
+    }
+    .btn-ghost:hover { border-color: var(--green); }
+
+    .hero-photo-wrap {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: var(--green-light);
+      border: 4px solid var(--green-mid);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    .hero-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ── DIVIDER ── */
+    .divider { border: none; border-top: 1px solid var(--border); margin: 0; }
+
+    /* ── HEADINGS ── */
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.4rem, 3vw, 1.95rem);
+      font-weight: 600;
+      color: var(--green);
+      margin-bottom: 1.4rem;
+    }
+    h3 {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+    }
+    p { margin-bottom: 1rem; color: var(--text-mid); }
+    p:last-child { margin-bottom: 0; }
+
+    /* ── QUI SUIS-JE ── */
+    #about { background: var(--bg); }
+    .about-highlight {
+      display: inline-block;
+      background: var(--green-light);
+      border-left: 3px solid var(--green);
+      border-radius: 0 8px 8px 0;
+      padding: 1rem 1.4rem;
+      font-size: 0.95rem;
+      color: var(--text-mid);
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    /* ── SPECIALITES ── */
+    #specialites { background: var(--white); }
+    .tags { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 1.4rem; }
+    .tag {
+      font-size: 0.9rem;
+      padding: 0.42rem 1rem;
+      border-radius: 100px;
+      background: var(--green-light);
+      color: var(--green);
+      border: 1px solid var(--green-mid);
+    }
+
+    /* ── APPROCHE ── */
+    #approche { background: var(--bg); }
+    .approche-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .approche-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.4rem 1.6rem;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .approche-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.09); }
+    .approche-card h3 { color: var(--green); font-size: 0.95rem; margin-bottom: 0.35rem; }
+    .approche-card p { font-size: 0.88rem; margin: 0; }
+    .outils {
+      background: var(--green-light);
+      border-left: 3px solid var(--green);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1.4rem 1.6rem;
+      margin-bottom: 1.5rem;
+    }
+    .outils h3 { color: var(--green); margin-bottom: 0.8rem; font-size: 1rem; }
+    .outils ul { list-style: none; padding: 0; }
+    .outils ul li { padding: 0.28rem 0; font-size: 0.93rem; color: var(--text-mid); }
+    .outils ul li::before { content: "→ "; color: var(--green); font-weight: 500; }
+
+    /* ── CTA MILIEU ── */
+    .cta-mid {
+      background: var(--green);
+      border-radius: var(--radius);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      margin: 0 2rem;
+    }
+    .cta-mid h2 { color: var(--white); margin-bottom: 0.6rem; }
+    .cta-mid p { color: rgba(255,255,255,0.8); margin-bottom: 1.6rem; font-size: 0.95rem; }
+    .btn-white {
+      display: inline-block;
+      background: var(--white);
+      color: var(--green);
+      text-decoration: none;
+      padding: 0.8rem 1.8rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: opacity 0.2s, transform 0.15s;
+    }
+    .btn-white:hover { opacity: 0.93; transform: translateY(-1px); }
+    .btn-white-ghost {
+      display: inline-block;
+      background: transparent;
+      color: var(--white);
+      text-decoration: none;
+      padding: 0.8rem 1.8rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      border: 2px solid rgba(255,255,255,0.6);
+      transition: border-color 0.2s, transform 0.15s;
+    }
+    .btn-white-ghost:hover { border-color: var(--white); transform: translateY(-1px); }
+
+    /* ── TARIFS ── */
+    #tarifs { background: var(--white); }
+    .tarifs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 1.4rem; }
+    .tarif-card {
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      text-align: center;
+      background: var(--bg);
+    }
+    .tarif-card.featured { border-color: var(--green); background: var(--white); box-shadow: var(--shadow); }
+    .tarif-label { font-size: 0.78rem; font-weight: 500; color: var(--green); text-transform: uppercase; letter-spacing: 0.09em; margin-bottom: 0.8rem; }
+    .tarif-price { font-family: 'Lora', serif; font-size: 2.6rem; font-weight: 600; color: var(--text); line-height: 1; margin-bottom: 0.5rem; }
+    .tarif-detail { font-size: 0.83rem; color: var(--text-light); }
+    .tarif-note {
+      background: var(--green-light);
+      border-radius: var(--radius);
+      padding: 1rem 1.3rem;
+      font-size: 0.87rem;
+      color: var(--text-mid);
+      margin-bottom: 1rem;
+    }
+
+    /* ── PREMIERE SESSION ── */
+    #premiere { background: var(--bg); }
+    .session-steps {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .session-step {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.4rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+    .step-num {
+      font-family: 'Lora', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--green-mid);
+      line-height: 1;
+      margin-bottom: 0.6rem;
+    }
+    .session-step h3 { font-size: 0.95rem; color: var(--green); margin-bottom: 0.4rem; }
+    .session-step p { font-size: 0.85rem; margin: 0; }
+
+    /* ── MODALITES ── */
+    #modalites { background: var(--white); }
+    .modalites-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+    .modalites-grid.deux { grid-template-columns: 1fr 1fr; }
+    .modalite-card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.7rem 1.5rem;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .modalite-card .modalite-adresse { flex-grow: 1; }
+    .modalite-card .lien-plus { margin-top: 0.9rem; }
+    .modalite-card h3 { color: var(--text); font-size: 1.05rem; margin-bottom: 0.25rem; }
+    .modalite-sub { font-size: 0.83rem; color: var(--text-mid); margin-bottom: 0.3rem; }
+    .modalite-adresse { font-size: 0.83rem; color: var(--text-light); margin-bottom: 1.4rem; }
+    .btn-white-outline {
+      display: inline-block;
+      background: var(--green);
+      color: var(--white);
+      text-decoration: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-white-outline:hover { background: var(--green-dark); transform: translateY(-1px); }
+
+    /* ── SEMAINE & LIEUX ── */
+    .semaine {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.6rem;
+      margin: 1.6rem 0 1.8rem;
+    }
+    .jour {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.9rem 0.6rem;
+      text-align: center;
+    }
+    .jour.cabinet { background: var(--green-light); border-color: var(--green-mid); }
+    .jour-nom {
+      display: block;
+      font-size: 0.73rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-light);
+      margin-bottom: 0.3rem;
+    }
+    .jour-lieu { display: block; font-size: 0.95rem; font-weight: 500; color: var(--text); }
+    .jour.cabinet .jour-lieu { color: var(--green); }
+    .jour-detail { display: block; font-size: 0.78rem; color: var(--text-light); }
+    .lieux-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    .lieu-card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.7rem 1.8rem;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+    }
+    .lieu-jour {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--green);
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      margin-bottom: 0.5rem;
+    }
+    .lieu-card h3 { margin-bottom: 0.3rem; }
+    .lieu-adresse { font-size: 0.85rem; color: var(--text-light); margin-bottom: 0.8rem; }
+    .lieu-card p.lieu-texte { font-size: 0.92rem; }
+    .lieu-actions {
+      margin-top: auto;
+      padding-top: 1.3rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.9rem 1.2rem;
+    }
+    .lien-plus {
+      color: var(--green);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+      border-bottom: 1px solid var(--green-mid);
+      padding-bottom: 1px;
+      transition: border-color 0.2s;
+    }
+    .lien-plus:hover { border-color: var(--green); }
+    .hero-lieux { margin-top: 1.4rem; font-size: 0.88rem; color: var(--text-light); }
+    .hero-lieux a { color: var(--green); text-decoration: none; border-bottom: 1px solid var(--green-mid); padding-bottom: 1px; }
+    .hero-lieux a:hover { border-color: var(--green); }
+    .photos-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.8rem; }
+    .photos-grid img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      display: block;
+    }
+    .photo-legende { font-size: 0.82rem; color: var(--text-light); margin-top: 0.7rem; }
+
+    /* ── PAGES DE LIEU ── */
+    .fil { font-size: 0.8rem; color: var(--text-light); margin-bottom: 1.4rem; }
+    .fil a { color: var(--text-light); text-decoration: none; border-bottom: 1px solid var(--border); }
+    .fil a:hover { color: var(--green); border-color: var(--green-mid); }
+    .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+    .info-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem 1.4rem;
+    }
+    .info-item .contact-label { display: block; margin-bottom: 0.35rem; }
+    .info-item p { font-size: 0.93rem; color: var(--text); margin: 0; }
+    .info-item p + p { margin-top: 0.3rem; color: var(--text-mid); font-size: 0.88rem; }
+    .callout {
+      background: #fdf6e3;
+      border-left: 3px solid #b7791f;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1.1rem 1.4rem;
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+    .callout strong { font-weight: 500; }
+    .texte-lien { color: var(--green); text-decoration: none; border-bottom: 1px solid var(--green-mid); }
+    .texte-lien:hover { border-color: var(--green); }
+    .contact-value + .contact-value { margin-top: 0.5rem; }
+
+    /* ── PAGES DE CONTENU ── */
+    .tarifs-grid.une { grid-template-columns: minmax(0, 440px); }
+    .liste { list-style: none; padding: 0; margin: 0 0 1.2rem; }
+    .liste li { position: relative; padding: 0.35rem 0 0.35rem 1.5rem; color: var(--text-mid); }
+    .liste li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: 500; }
+    .liste li strong { font-weight: 500; color: var(--text); }
+    .exemple {
+      background: var(--green-light);
+      border-left: 3px solid var(--green);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1.2rem 1.5rem;
+      margin: 1.4rem 0;
+      font-size: 0.97rem;
+      color: var(--text-mid);
+    }
+    .exemple strong { font-weight: 500; color: var(--text); }
+    .urgence {
+      font-size: 0.88rem;
+      color: var(--text-light);
+      border-top: 1px solid var(--border);
+      padding-top: 1rem;
+      margin-top: 1.6rem;
+    }
+    .liens-plus { margin-top: 1.4rem; font-size: 0.95rem; }
+    .formations { margin-top: 2rem; padding-top: 1.4rem; border-top: 1px solid var(--border); }
+    .formations h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.73rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-light);
+      margin: 1.3rem 0 0.5rem;
+    }
+    .formations h3:first-child { margin-top: 0; }
+    .formations ul { list-style: none; padding: 0; }
+    .formations li { display: grid; grid-template-columns: 6.6rem 1fr; gap: 0.8rem; padding: 0.45rem 0; }
+    .formation-annee { font-size: 0.93rem; font-weight: 500; color: var(--green); white-space: nowrap; }
+    .formation-titre { display: block; font-size: 0.95rem; color: var(--text); }
+    .formation-org { display: block; font-size: 0.85rem; color: var(--text-light); }
+    .legal h2 { font-size: 1.25rem; margin-top: 2.4rem; margin-bottom: 0.7rem; }
+    .legal p { font-size: 0.95rem; }
+
+    /* ── FAQ ── */
+    #faq { background: var(--bg); }
+    .faq-list { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem; }
+    details {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    details[open] { border-color: var(--green-mid); }
+    summary {
+      padding: 1.2rem 1.5rem;
+      font-weight: 500;
+      font-size: 0.97rem;
+      color: var(--text);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: "+";
+      font-size: 1.3rem;
+      color: var(--green);
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+    details[open] summary::after { transform: rotate(45deg); }
+    .faq-answer {
+      padding: 0 1.5rem 1.2rem;
+      font-size: 0.93rem;
+      color: var(--text-mid);
+      line-height: 1.7;
+    }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--white); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .contact-item { display: flex; flex-direction: column; gap: 0.3rem; }
+    .contact-label {
+      font-size: 0.73rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-light);
+    }
+    .contact-value { font-size: 0.93rem; color: var(--text); text-decoration: none; }
+    .contact-value:hover { color: var(--green); }
+    .rpps-note {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: var(--text-light);
+      border-top: 1px solid var(--border);
+      padding-top: 1.2rem;
+    }
+
+    /* ── STICKY MOBILE CTA ── */
+    .sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      padding: 0.9rem 1.5rem;
+      box-shadow: 0 -4px 16px rgba(0,0,0,0.08);
+    }
+    .sticky-cta a {
+      display: block;
+      text-align: center;
+      background: var(--green);
+      color: var(--white);
+      text-decoration: none;
+      padding: 0.85rem;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--text);
+      color: rgba(255,255,255,0.45);
+      text-align: center;
+      padding: 1.6rem 2rem;
+      font-size: 0.78rem;
+    }
+    footer p { color: rgba(255,255,255,0.55); margin-bottom: 0.4rem; line-height: 1.9; }
+    footer a { color: rgba(255,255,255,0.78); text-decoration: none; }
+    footer a:hover { color: var(--white); }
+
+    /* ── ANIMATIONS ── */
+    @media (prefers-reduced-motion: no-preference) {
+      .fade-in {
+        opacity: 0;
+        transform: translateY(16px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+      .fade-in.visible { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1000px) {
+      .nav-links { gap: 1.1rem; }
+      .nav-links a { font-size: 0.8rem; }
+    }
+    @media (max-width: 880px) {
+      .nav-mobile { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 10px 18px rgba(0,0,0,0.07);
+        padding: 0.3rem 2rem 0.8rem;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { border-bottom: 1px solid var(--border); }
+      .nav-links li:last-child, .nav-links li.nav-lang { border-bottom: none; }
+      .nav-links li > a { display: block; padding: 0.85rem 0; font-size: 0.95rem; }
+      .nav-links .nav-cta-item { display: none; }
+      .nav-lang { margin: 0; padding: 0.7rem 0 0.2rem; font-size: 0.95rem; }
+      .nav-lang a { font-size: 0.95rem; }
+    }
+    @media (max-width: 640px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-photo-wrap { display: flex; width: 120px; height: 120px; margin-bottom: 1.5rem; order: -1; }
+      .approche-grid, .tarifs-grid, .modalites-grid, .modalites-grid.deux,
+      .contact-grid, .session-steps, .lieux-grid, .info-grid,
+      .photos-grid, .semaine { grid-template-columns: 1fr; }
+      .semaine { gap: 0.4rem; }
+      .jour {
+        display: grid;
+        grid-template-columns: 6.2rem 1fr;
+        align-items: baseline;
+        text-align: left;
+        padding: 0.7rem 1rem;
+      }
+      .jour-nom { margin-bottom: 0; }
+      .jour-detail { grid-column: 2; }
+      .photos-grid img { height: 210px; }
+      nav { padding: 0 1.2rem; }
+      .nav-links { padding-left: 1.2rem; padding-right: 1.2rem; }
+      .sticky-cta { display: block; }
+      body { padding-bottom: 80px; }
+      .cta-mid { margin: 0; border-radius: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-name" href="/">Richard Samier</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/burn-out-psychologue-lyon">Burn-out</a></li>
+        <li><a href="/therapie-tcc-lyon">TCC</a></li>
+        <li><a href="/psychologue-lyon-6">Cabinet Lyon 6</a></li>
+        <li><a href="/psychologue-lyon-9">Cabinet Lyon 9</a></li>
+        <li><a href="/#tarifs">Tarifs</a></li>
+        <li class="nav-cta-item"><a href="/#modalites" class="nav-cta">Prendre RDV</a></li>
+      </ul>
+      <div class="nav-mobile">
+        <a href="/#modalites" class="nav-cta">Prendre RDV</a>
+        <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <section id="mentions" class="legal" style="background: var(--white); padding-top: 4rem;">
+    <div class="container">
+      <p class="fil"><a href="/">Accueil</a> › Mentions légales</p>
+      <h1 style="font-size: clamp(1.8rem, 3.5vw, 2.4rem);">Mentions légales et confidentialité</h1>
+
+      <h2>Éditeur du site</h2>
+      <p>Richard Samier, psychologue — RPPS n° 10109835404<br />
+      Adresse professionnelle : 116 rue Vauban, 69006 Lyon<br />
+      Téléphone : <a href="tel:+33609520666" class="texte-lien">06 09 52 06 66</a> · E-mail : <a href="mailto:richardsamier.psy@gmail.com" class="texte-lien">richardsamier.psy@gmail.com</a></p>
+      <p>Directeur de la publication : Richard Samier.</p>
+
+      <h2>Hébergement</h2>
+      <p>Ce site est hébergé par GitHub Pages — GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis (<a href="https://pages.github.com" class="texte-lien" target="_blank" rel="noopener">pages.github.com</a>).</p>
+
+      <h2>Propriété intellectuelle</h2>
+      <p>Les textes et les photographies de ce site sont la propriété de Richard Samier. Toute reproduction, totale ou partielle, sans autorisation préalable est interdite.</p>
+
+      <h2>Données personnelles</h2>
+      <p>Ce site ne comporte ni formulaire, ni cookie, ni outil de mesure d'audience. Les polices de caractères sont servies directement depuis le site.</p>
+      <p>Comme tout hébergeur, GitHub peut enregistrer des données techniques de connexion (dont l'adresse IP) à des fins de sécurité.</p>
+      <p>Si vous m'écrivez ou m'appelez, vos coordonnées ne sont utilisées que pour vous répondre. La prise de rendez-vous s'effectue sur des services tiers (Doctolib, Calendly), qui appliquent leur propre politique de confidentialité.</p>
+      <p>Vous disposez d'un droit d'accès, de rectification et d'effacement des données vous concernant : il suffit de m'écrire à <a href="mailto:richardsamier.psy@gmail.com" class="texte-lien">richardsamier.psy@gmail.com</a>. Vous pouvez également adresser une réclamation à la CNIL (<a href="https://www.cnil.fr" class="texte-lien" target="_blank" rel="noopener">cnil.fr</a>).</p>
+
+      <h2>Urgence</h2>
+      <p>Ce site ne permet pas de répondre aux situations d'urgence. En cas de détresse aiguë, appelez le 15 ou le 3114 (numéro national de prévention du suicide, 24h/24).</p>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p><a href="/psychologue-lyon-6">Psychologue Lyon 6</a> · <a href="/psychologue-lyon-9">Psychologue Lyon 9</a> · <a href="/burn-out-psychologue-lyon">Burn-out</a> · <a href="/therapie-tcc-lyon">TCC</a> · <a href="/mentions-legales">Mentions légales</a></p>
+    <p>© 2026 Richard Samier — Psychologue TCC · <a href="mailto:richardsamier.psy@gmail.com">richardsamier.psy@gmail.com</a></p>
+  </footer>
+
+  <!-- STICKY MOBILE CTA -->
+  <div class="sticky-cta">
+    <a href="/#modalites">Prendre rendez-vous</a>
+  </div>
+
+  <script>
+    // Scroll fade-in
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Menu mobile
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    if (navToggle && navLinks) {
+      const setOpen = (open) => {
+        navLinks.classList.toggle('open', open);
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      };
+      navToggle.addEventListener('click', () => setOpen(!navLinks.classList.contains('open')));
+      navLinks.addEventListener('click', (e) => { if (e.target.closest('a')) setOpen(false); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
+    }
+  </script>
+
+</body>
+</html>
